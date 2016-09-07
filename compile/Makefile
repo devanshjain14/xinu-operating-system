@@ -11,8 +11,8 @@
 NODE=0
 GPORT=556${NODE}
 
-COMPILER_ROOT	=      /l/arm2/devtools/bin/arm-none-eabi-
-LIBGCC_LOC      =      /l/arm2/devtools/lib/gcc/arm-none-eabi/4.8.4
+COMPILER_ROOT	=      /usr/bin/arm-none-eabi-
+LIBGCC_LOC      =      /usr/lib/gcc/arm-none-eabi/5.4.1
 
 PNAME		=	bbb
 PLAT		=	Platform_$(PNAME)
