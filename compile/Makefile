@@ -7,12 +7,10 @@
 #									#
 #									#
 #########################################################################
+include Makedefs
 
 NODE=0
 GPORT=556${NODE}
-
-COMPILER_ROOT	=      /usr/bin/arm-none-eabi-
-LIBGCC_LOC      =      /usr/lib/gcc/arm-none-eabi/5.4.1
 
 PNAME		=	bbb
 PLAT		=	Platform_$(PNAME)
