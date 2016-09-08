@@ -1,3 +1,10 @@
+# Local files
+compile/Makedefs
+compile/.defs
+compile/.vers_num
+compile/version
+compile/xinu.map
+
 # Object files
 *.o
 *.ko
