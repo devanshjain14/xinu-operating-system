@@ -1,5 +1,6 @@
-# Fall 2016
+# Welcome to Xinu
 
-Welcome to Operating Systems!
+# Build instructions
 
+Copy the file config/Makedefs.EXAMPLE to config/Makedefs and make appropriate changes if necessary.
 
