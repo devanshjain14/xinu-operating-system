@@ -10,9 +10,9 @@ ID [a-z_A-Z][a-z_A-Z0-9]*
 %%
 "/*"      { skipping = 1;                     }
 "*/"      { skipping = 0;                     }
-"%%"      { if (! skipping)
+"%%"      { if (! skipping) 
                 if (++brkcount == 2)
-                { return 0; /* EOF */ }
+                { return 0; /* EOF */ }	      
                 else
                 { return DEFBRK; }            }
 ":"       { if (! skipping) return COLON;     }
@@ -38,3 +38,9 @@ on        { if (! skipping) return ON;        }
 "\n"      { linectr++;                        }
 {ID}      { if (! skipping) return IDENT;     }
 .         { if (! skipping) return yytext[0]; }
+
+%%
+
+int wrapped_input(void) {
+        return input();
+}
