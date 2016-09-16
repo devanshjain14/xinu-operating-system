@@ -105,7 +105,7 @@ xinu:	Makefile rebuild $(BLDDIRS) $(DEFSFILE) $(DEPSFILE) $(CONFH) $(CONFC) $(LD
 	@echo;echo 'Loading object files to produce xinu'
 	@$(LD) $(LDFLAGS) $(LD_LIST) -o $(XINU) -L$(LIBGCC_LOC) -lgcc
 	@$(OBJCOPY) -O binary $(XINU) $(XINUBIN)
-	@./uboot-tool/mkimage -A arm -O linux -T kernel -C none -a 0x81000000 -e 0x81000000 -d $(XINUBIN) $(XINUBOOT)
+	@./uboot-tool/mkimage -A arm -O linux -T kernel -C none -a 0x00010000 -e 0x00010000 -d $(XINUBIN) $(XINUBOOT)
 
 $(BLDDIRS): 
 	@mkdir -p $(BLDDIRS)
@@ -144,10 +144,10 @@ install: xinu
 	cp xinu.boot /tftpboot
 
 qemu: xinu
-	qemu-system-arm -M versatilepb -m 3G -nographic -cpu arm1176  -kernel xinu.boot 
+	qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176  -kernel xinu.boot 
 
 qemu-gdb: xinu
-	qemu-system-arm -M versatilepb -m 3G -nographic -cpu arm1176  -kernel xinu.boot -S -gdb tcp::${GPORT}
+	qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176  -kernel xinu.boot -S -gdb tcp::${GPORT}
 #--------------------------------------------------------------------------------
 # Locations of source directories and exceptions (.c and .[sS] files to exclude)
 #--------------------------------------------------------------------------------
