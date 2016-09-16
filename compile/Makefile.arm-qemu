@@ -12,7 +12,7 @@ include Makedefs
 NODE=0
 GPORT=556${NODE}
 
-PNAME		=	bbb
+PNAME		=	qemu
 PLAT		=	Platform_$(PNAME)
 TOPDIR		=	..
 
