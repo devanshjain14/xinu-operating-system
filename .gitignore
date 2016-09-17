@@ -4,6 +4,13 @@ compile/.defs
 compile/.vers_num
 compile/version
 compile/xinu.map
+compile/xinu
+compile/xinu.bin
+compile/xinu.boot
+
+# binaries
+config/config
+compile/uboot-tool/mkimage
 
 # Object files
 *.o
