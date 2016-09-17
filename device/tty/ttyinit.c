@@ -62,8 +62,13 @@ devcall	ttyinit(
 
 	/* Register the interrupt dispatcher for the tty device */
 
-	//set_evec( devptr->dvirq, (uint32)devptr->dvintr );
+#ifdef ARM_BBB
+	set_evec( devptr->dvirq, (uint32)devptr->dvintr );
+#endif /* ARM_BBB */
+#ifdef ARM_QEMU
 	interruptVector[devptr->dvirq] = devptr->dvintr;
+#endif /* ARM_QEMU */
+
 	/* Enable interrupts on the device: reset the transmit and	*/
 	/*   receive FIFOS, and set the interrupt trigger level		*/
 

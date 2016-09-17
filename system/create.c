@@ -54,9 +54,9 @@ pid32	create(
 	prptr->prhasmsg = FALSE;
 
 	/* set up initial device descriptors for the shell		*/
-	prptr->prdesc[0] = SERIAL0;	/* stdin  is CONSOLE device	*/
-	prptr->prdesc[1] = SERIAL0;	/* stdout is CONSOLE device	*/
-	prptr->prdesc[2] = SERIAL0;	/* stderr is CONSOLE device	*/
+	prptr->prdesc[0] = CONSOLE;	/* stdin  is CONSOLE device	*/
+	prptr->prdesc[1] = CONSOLE;	/* stdout is CONSOLE device	*/
+	prptr->prdesc[2] = CONSOLE;	/* stderr is CONSOLE device	*/
 
 	/* Initialize stack as if the process was called		*/
 

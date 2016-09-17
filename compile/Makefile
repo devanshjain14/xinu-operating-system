@@ -14,10 +14,10 @@ GPORT=556${NODE}
 
 PLATFORM	=	arm-qemu
 ifeq ($(PLATFORM),arm-qemu)
-	PLAT_CFLAGS =  -mcpu=arm1176jz-s -ggdb3 
+	PLAT_CFLAGS =  -DARM_QEMU -mcpu=arm1176jz-s -ggdb3 
 	PLAT_LOADADDR = 0x00010000
 else ifeq ($(PLATFORM),arm-bbb)
-	PLAT_CFLAGS =  -mcpu=cortex-a8 
+	PLAT_CFLAGS =  -DARM_BBB -mcpu=cortex-a8 
 	PLAT_LOADADDR = 0x81000000
 else ifeq ($(PLATFORM),x86-galileo)
 	PLAT_CFLAGS =   
@@ -39,7 +39,7 @@ MAKEDEP		=	$(CC) -M -MG
 DEPSFILE	=	.deps
 DEFSFILE	=	.defs
 VERSIONFILE	=	version
-LDSCRIPT	=	ld.script
+LDSCRIPT	=	ld.script.${PLATFORM}
 REBUILDFLAGS	=	-s $(TOPDIR)/system  debug.c 	\
 			-s $(TOPDIR)/system/platform/$(PLATFORM)\
 			-s $(TOPDIR)/lib			\
@@ -54,6 +54,7 @@ REBUILDFLAGS 	+=	-s $(TOPDIR)/device/tty			\
 			-s $(TOPDIR)/device/uart		\
 			-s $(TOPDIR)/device/uart-pl011		\
 			-s $(TOPDIR)/device/loopback		
+
 else ifeq ($(PLATFORM),arm-bbb)
 REBUILDFLAGS    +=	-s $(TOPDIR)/device/tty			\
 			-s $(TOPDIR)/device/nam			\
@@ -63,7 +64,8 @@ REBUILDFLAGS    +=	-s $(TOPDIR)/device/tty			\
 			-s $(TOPDIR)/device/lfs			\
 			-s $(TOPDIR)/device/rfs			\
 			-s $(TOPDIR)/net  'arp_dump*'		\
-				dhcp_dump*'  pxe.c
+				'dhcp_dump*'  pxe.c		\
+
 else ifeq ($(PLATFORM),x86-galileo)
 endif
 
@@ -76,7 +78,7 @@ SFLAGS  = ${INCLUDE}
 
 # Loader flags
 
-LDFLAGS = -dn -m armelf -Map xinu.map -T ld.script
+LDFLAGS = -dn -m armelf -Map xinu.map -T ld.script.${PLATFORM}
 
 all:	xinu
 
@@ -104,7 +106,7 @@ LD_LIST = binaries/start.o $(filter-out binaries/start.o,$(OBJ_FILES))
 
 # Define variables for the Configuration file and generated files
 
-CONFFILE	= $(TOPDIR)/config/Configuration
+CONFFILE	= $(TOPDIR)/config/Configuration.${PLATFORM}
 CONFH		= $(TOPDIR)/include/conf.h
 CONFC		= $(TOPDIR)/system/conf.c
 
@@ -153,7 +155,7 @@ $(CONFPGM): $(CONFL) $(CONFY)
 configure:
 	@echo forcing a rebuild of conf.h and conf.c
 	@make newversion
-	@(cd $(TOPDIR)/config; make install)
+	@(cd $(TOPDIR)/config; make PLATFORM=$(PLATFORM) install)
 
 clean:
 	@echo removing .o files
@@ -165,6 +167,7 @@ clean:
 	@rm -f $(XINU)
 	@rm -f $(XINUBIN)
 	@rm -f $(XINUBOOT)
+	@rm -f .defs
 
 install: xinu
 	cp xinu.boot /tftpboot
