@@ -12,7 +12,7 @@ include Makedefs
 NODE=0
 GPORT=556${NODE}
 
-PNAME		=	qemu
+PNAME		=	arm-qemu
 PLAT		=	Platform_$(PNAME)
 TOPDIR		=	..
 
@@ -33,6 +33,7 @@ VERSIONFILE	=	version
 LDSCRIPT	=	ld.script
 MKVERS		=	$(TOPDIR)/compile/bin/mkvers
 REBUILDFLAGS	=	-s $(TOPDIR)/system  debug.c 	\
+			-s $(TOPDIR)/system/platform/$(PNAME)	\
 			-s $(TOPDIR)/lib			\
 			-s $(TOPDIR)/device/tty			\
 			-s $(TOPDIR)/device/nam			\

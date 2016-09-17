@@ -19,8 +19,9 @@ interrupt uartInterrupt(void)
     /* Set resdefer to prevent other threads from being scheduled before this
      * interrupt handler finishes.  This prevents this interrupt handler from
      * being executed re-entrantly.  */
-    extern int resdefer;
-    resdefer = 1;
+    //extern int resdefer;
+    //resdefer = 1;
+    resched_cntl(DEFER_START);
 
     /* Check for interrupts on each UART.  Note: this assumes all the UARTs in
      * 'uarttab' are PL011 UARTs.  */
@@ -139,11 +140,16 @@ interrupt uartInterrupt(void)
         }
     }
 
+    
     /* Now that the UART interrupt handler is finished, we can safely wake up
      * any threads that were signaled.  */
+    /* from exinu.  Xinu has a function to enable/disable deferral
+
     if (--resdefer > 0)
     {
         resdefer = 0;
         resched();
     }
+    */
+    resched_cntl(DEFER_STOP);
 }
