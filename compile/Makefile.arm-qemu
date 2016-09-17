@@ -101,11 +101,15 @@ export
 # Specific additional rules and exceptions
 #--------------------------------------------------------------------------------
 
-xinu:	Makefile rebuild $(BLDDIRS) $(DEFSFILE) $(DEPSFILE) $(CONFH) $(CONFC) $(LD_LIST)
+xinu:	Makefile rebuild $(BLDDIRS) $(DEFSFILE) $(DEPSFILE) $(CONFH) $(CONFC) $(LD_LIST) uboot-tool/mkimage
 	@echo;echo 'Loading object files to produce xinu'
 	@$(LD) $(LDFLAGS) $(LD_LIST) -o $(XINU) -L$(LIBGCC_LOC) -lgcc
 	@$(OBJCOPY) -O binary $(XINU) $(XINUBIN)
 	@./uboot-tool/mkimage -A arm -O linux -T kernel -C none -a 0x00010000 -e 0x00010000 -d $(XINUBIN) $(XINUBOOT)
+
+uboot-tool/mkimage: uboot-tool/mkimage.c
+	@echo making mkimage
+	@(cd uboot-tool; make)
 
 $(BLDDIRS): 
 	@mkdir -p $(BLDDIRS)

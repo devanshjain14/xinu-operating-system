@@ -1,4 +1,4 @@
-/* clkinit.c - clkinit (BeagleBone Black) */
+/* clkinit.c - clkinit for Qemu versatilepb/arm1176 */
 
 #include <xinu.h>
 #include <platform.h>
