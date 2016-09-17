@@ -7,6 +7,8 @@ compile/xinu.map
 compile/xinu
 compile/xinu.bin
 compile/xinu.boot
+config/lex.yy.c
+config/y.tab.c
 
 # binaries
 config/config
