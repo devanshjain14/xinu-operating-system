@@ -7,7 +7,7 @@
 VERS_NUM_FILE=.vers_num
 
 case $# in
-    1)	PLAT="$1"
+    1)	PLATFORM="$1"
 	;;
     *)	echo 'use is:  mkvers platform_name' >&2
 	exit 1
@@ -24,4 +24,4 @@ echo $VERS > $VERS_NUM_FILE
 if test "x$USER" = "x"; then
        USER=`who am i | sed 's/ .*//'`
 fi
-echo "Xinu for $PLAT -- version #$VERS  ($USER)  `date`"
+echo "Xinu for $PLATFORM -- version #$VERS  ($USER)  `date`"
