@@ -34,7 +34,7 @@ int32	initintc()
  * set_evec - set exception vector to point to an exception handler
  *------------------------------------------------------------------------
  */
-int32	set_1evec(uint32 xnum, uint32 handler)
+int32	set_evec(uint32 xnum, uint32 handler)
 {
 	struct	intc_csreg *csrptr = (struct intc_csreg *)0x48200000;
 	uint32	bank;	/* bank number in int controller	*/
