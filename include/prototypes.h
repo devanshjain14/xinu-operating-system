@@ -619,6 +619,7 @@ extern	syscall	yield(void);
 		      (((x)<< 8) & 0x00ff0000) | (((x)<<24) & 0xff000000) )
 
 
+#ifdef ARM_QEMU
 devcall loopbackInit(struct dentry *);
 devcall loopbackOpen(struct dentry *);
 devcall loopbackClose(struct dentry *);
@@ -629,4 +630,11 @@ devcall loopbackPutc(struct dentry *, char);
 devcall loopbackControl(struct dentry *, int, long, long);
 
 syscall kputc(uchar c, struct dentry *devptr);
+#endif /* ARM_QEMU */
 
+#ifdef ARM_BBB
+/* Prototypes of I/O functions used throughout the kernel */
+syscall       kprintf(char *fmt, ...);
+syscall       kputc(byte);
+syscall       kgetc(void);
+#endif /* ARM_BBB */
