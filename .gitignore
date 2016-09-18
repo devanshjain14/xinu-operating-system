@@ -9,6 +9,8 @@ compile/xinu.bin
 compile/xinu.boot
 config/lex.yy.c
 config/y.tab.c
+config/conf.h
+config/conf.c
 include/conf.h
 system/conf.c
 
