@@ -16,7 +16,7 @@ ctxsw:
 	str	sp, [r0]		/* Save old process's SP	*/
 	ldr	sp, [r1]		/* Pick up new process's SP	*/
 	pop	{r0}			/* Use status as argument and	*/
-	//bl	restore			/*   call restore to restore it	*/
+	bl	restore			/*   call restore to restore it	*/
 	pop	{lr}			/* Pick up the return address	*/
 	pop	{r0-r12}		/* Restore other registere	*/
 	mov	pc, r12			/* Return to the new process	*/
