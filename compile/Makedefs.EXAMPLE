@@ -1,20 +1,24 @@
-## Definitions for Xinu cross-compilation
-# For Macports
-#COMPILER_ROOT   =      /opt/local/bin/arm-none-eabi-
-#LIBGCC_LOC      =      /opt/local/lib/gcc/arm-none-eabi/5.1.0/
+# COMPILER_ROOT and LIBGCC_LOC are for the cross compiler
+# CONF_LFLAGS is for the config program in $XINU_HOME/config
+# Uncomment the appropriate variables for your environment 
+#  and comment or delete the other ones.
 
 # For the Linux VM
 COMPILER_ROOT   =      /usr/bin/arm-none-eabi-
 LIBGCC_LOC      =      /usr/lib/gcc/arm-none-eabi/5.4.1
+CONF_LFLAGS = -lfl
 
 # For SoIC Linux machines
 #COMPILER_ROOT   =      /l/arm2/devtools/bin/arm-none-eabi-
 #LIBGCC_LOC      =      /l/arm2/devtools/lib/gcc/arm-none-eabi/4.8.4
+#CONF_LFLAGS = -lfl
 
-## Definitions for the config program in $XINU_HOME/config
-
-# For Macports
+# For Macports on macOS
+#COMPILER_ROOT   =      /opt/local/bin/arm-none-eabi-
+#LIBGCC_LOC      =      /opt/local/lib/gcc/arm-none-eabi/5.1.0/
 #CONF_LFLAGS = -L/opt/local/lib -lfl
 
-# For the Linux VM
-CONF_LFLAGS = -lfl
+# For Homebrew on macOS
+#COMPILER_ROOT = /usr/local/Cellar/gcc-arm-none-eabi/20150925/bin/arm-none-eabi-
+#LIBGCC_LOC = /usr/local/Cellar/gcc-arm-none-eabi/20150925/lib/gcc/arm-none-eabi/4.9.3
+#CONF_LFLAGS = -L/usr/local/opt/flex/lib -lfl
