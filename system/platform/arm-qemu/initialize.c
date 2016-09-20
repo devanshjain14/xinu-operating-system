@@ -4,7 +4,10 @@
 
 #include <xinu.h>
 #include <string.h>
+#ifdef ARM_QEMU
 #include <platform.h>
+#endif /* ARM_QEMU */
+
 extern	void	start(void);	/* Start of Xinu code			*/
 extern	void	*_end;		/* End of Xinu code			*/
 
@@ -25,7 +28,10 @@ struct	memblk	memlist;	/* List of free memory blocks		*/
 
 int	prcount;		/* Total number of live processes	*/
 pid32	currpid;		/* ID of currently executing process	*/
-struct platform platform; 
+#ifdef ARM_QEMU
+struct platform platform;
+#endif /* ARM_QEMU */
+
 /*------------------------------------------------------------------------
  * nulluser - initialize the system and become the null process
  *
@@ -74,6 +80,7 @@ void	nulluser()
 	/* Enable interrupts */
 
 	enable();
+
 	#ifdef MMU
 	/* Initialize MMU(Paging) */
 	initializeMMU();
@@ -110,10 +117,13 @@ static	void	sysinit()
 
 	platinit();
 
-	/* Initialize the interrupt vectors */
-
-	//initevec();
-	
+	/* Initialize the interrupt vectors on BBB this is done elsewhere in 
+     Embedded Xinu (the QEMU version)
+   */
+#ifdef ARM_BBB
+	initevec();
+#endif /* ARM_BBB */
+  
 	/* Initialize free memory list */
 	
 	meminit();

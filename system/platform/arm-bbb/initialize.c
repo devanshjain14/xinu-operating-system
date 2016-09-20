@@ -44,22 +44,14 @@ void	nulluser()
 {	
 	struct	memblk	*memptr;	/* Ptr to memory block		*/
 	uint32	free_mem;		/* Total amount of free memory	*/
-  volatile uint32 *wspr = (volatile uint32 *) 0x44E35048;
-	volatile uint32 *wwps = (volatile uint32 *) 0x44E35034;
+  
  
 	/* Initialize the system */
 
 	sysinit();
 
 	kprintf("\n\r%s\n\n\r", VERSION);
-	
-	kprintf("Disable AM335x watchdog timer 1: ");
-	*wspr = 0x0000AAAA;
-	while (*wwps&0x00000010); // Delay while the first write completes
-	*wspr = 0x00005555;
-	while (*wwps&0x00000010); // Delay while the second write completes
-	kprintf("Complete\n\r");
-	
+		
 	/* Output Xinu memory layout */
 	free_mem = 0;
 	for (memptr = memlist.mnext; memptr != NULL;

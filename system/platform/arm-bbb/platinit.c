@@ -8,8 +8,9 @@
  */
 void	platinit(void)
 {
-
 	struct	uart_csreg *uptr;	/* address of UART's CSRs	*/
+  volatile uint32 *wspr = (volatile uint32 *) 0x44E35048;
+	volatile uint32 *wwps = (volatile uint32 *) 0x44E35034;
 
 	/* Initialize the Interrupt Controller */
 
@@ -27,4 +28,11 @@ void	platinit(void)
 	uptr = (struct uart_csreg *)devtab[CONSOLE].dvcsr;
 	uptr->sysc |= UART_SYSC_SOFTRESET;
 	while((uptr->syss & UART_SYSS_RESETDONE) == 0);
+
+  kprintf("Disable AM335x watchdog timer 1: ");
+	*wspr = 0x0000AAAA;
+	while (*wwps&0x00000010); // Delay while the first write completes
+	*wspr = 0x00005555;
+	while (*wwps&0x00000010); // Delay while the second write completes
+	kprintf("Complete\n\r");
 }
