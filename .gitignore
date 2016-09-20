@@ -13,6 +13,7 @@ config/conf.h
 config/conf.c
 include/conf.h
 system/conf.c
+TAGS
 
 # binaries
 config/config

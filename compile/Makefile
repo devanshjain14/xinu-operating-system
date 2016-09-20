@@ -172,6 +172,9 @@ clean:
 install: xinu
 	cp xinu.boot /tftpboot
 
+etags:
+	@(cd $(TOPDIR); find . -name '*.[ch]' -exec etags -a {} \;)
+
 qemu: xinu
 	qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176  -kernel xinu.boot 
 
