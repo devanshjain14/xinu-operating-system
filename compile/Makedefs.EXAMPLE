@@ -1,3 +1,6 @@
+# set the plaform to arm-qemu, arm-bbb, etc.
+PLATFORM=arm-qemu
+
 # COMPILER_ROOT and LIBGCC_LOC are for the cross compiler
 # CONF_LFLAGS is for the config program in $XINU_HOME/config
 # Uncomment the appropriate variables for your environment 
