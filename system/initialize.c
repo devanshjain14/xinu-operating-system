@@ -18,6 +18,8 @@ extern	void xdone(void);	/* System "shutdown" procedure		*/
 static	void sysinit(); 	/* Internal system initialization	*/
 extern	void meminit(void);	/* Initializes the free memory list	*/
 
+void am335x_init(void);
+
 /* Declarations of major kernel variables */
 
 struct	procent	proctab[NPROC];	/* Process table			*/
@@ -117,9 +119,9 @@ static	void	sysinit()
 
 	platinit();
 
-	/* Initialize the interrupt vectors on BBB this is done elsewhere in 
-     Embedded Xinu (the QEMU version)
-   */
+	/* Initialize the interrupt vectors on BBB.
+	   This is done elsewhere in Embedded Xinu (the QEMU version)
+	*/
 #ifdef ARM_BBB
 	initevec();
 #endif /* ARM_BBB */
@@ -183,6 +185,11 @@ static	void	sysinit()
 	for (i = 0; i < NDEVS; i++) {
 		init(i);
 	}
+
+#ifdef ARM_BBB
+	am335x_init();
+#endif /* ARM_BBB */
+
 	return;
 }
 
