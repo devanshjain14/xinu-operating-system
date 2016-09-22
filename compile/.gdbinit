@@ -1,4 +1,4 @@
 target extended-remote :5560
-load xinu
+file xinu
 b main
 c
