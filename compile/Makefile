@@ -179,10 +179,10 @@ etags:
 	@(cd $(TOPDIR); find . -name '*.[ch]' -exec etags -a {} \;)
 
 qemu: xinu
-	qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176  -kernel xinu.boot 
+	export QEMU_AUDIO_DRV=wav; export	QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav; qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176  -kernel xinu.boot 
 
 qemu-gdb: xinu
-	qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176  -kernel xinu.boot -S -gdb tcp::${GPORT}
+		export QEMU_AUDIO_DRV=wav; export	QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav;qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176  -kernel xinu.boot -S -gdb tcp::${GPORT}
 #--------------------------------------------------------------------------------
 # Locations of source directories and exceptions (.c and .[sS] files to exclude)
 #--------------------------------------------------------------------------------
