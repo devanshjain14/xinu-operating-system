@@ -29,7 +29,7 @@ disable:
 restore:
 	push	{r1, r2}	/* Save r1, r2 on stack			*/
 	mrs	r1, cpsr	/* Copy CPSR into r1			*/
-	ldr	r2, =0x01F00220
+	ldr	r2, =0x01000220
 	and	r1, r1, r2	/* Extract flags and other important	*/
 	bic	r0, r0, r2	/*    bits from the mask		*/
 	orr	r1, r1, r0
