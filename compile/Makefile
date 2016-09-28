@@ -176,7 +176,7 @@ install: xinu
 	cp xinu.boot /tftpboot
 
 etags:
-	@(cd $(TOPDIR); find . -name '*.[ch]' -exec etags -a {} \;)
+	@(cd $(TOPDIR); find . -name '*.[chS]' -exec etags -a {} \;)
 
 qemu: xinu
 	export QEMU_AUDIO_DRV=wav; export QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav; qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176 -kernel xinu.boot 
