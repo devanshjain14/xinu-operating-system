@@ -1,0 +1,3 @@
+deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates main
+deb-src http://us.archive.ubuntu.com/ubuntu/ trusty-updates main
+
