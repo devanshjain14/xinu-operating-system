@@ -85,8 +85,14 @@ pid32	create(
 			*--saddr = 0;
 	}
 	*--saddr = (long)INITRET;	/* push on return address	*/
+#ifdef ARM_BBB
 	*--saddr = (long)0x00000053;	/* CPSR, A, F bits set,		*/
 					/* Supervisor mode		*/
+#endif
+#ifdef ARM_QEMU
+	*--saddr = (long)0x0000015F;	/* CPSR, A, F bits set,		*/
+					/* System  mode		*/
+#endif
 	prptr->prstkptr = (char *)saddr;
 	restore(mask);
 	return pid;
