@@ -3,7 +3,7 @@
  */
 /* Embedded Xinu, Copyright (C) 2013.  All rights reserved. */
 
-#include <armv7a.h>  /* Needed for ARM_MODE_SYS definition.  */
+#include <armv7a.h>  /* Needed for ARM_MODE_* definitions.  */
 
 .globl irq_handler
 
@@ -30,11 +30,11 @@ irq_handler:
 	 * SPSR_irq, which is the CPSR from SYS mode before we were interrupted,
 	 * and LR_irq, which is the address to which we must return to continue
 	 * execution of the interrupted thread.  */
-	srsdb #ARMV7A_CPSR_SYS!
+	srsdb #ARMV7A_CPSR_SPR!
 
 	/* [Change Program State Interrupt Disable] */
-	/* Change to SYS mode, with IRQs and FIQs still disabled.  */
-	cpsid if, #ARMV7A_CPSR_SYS
+	/* Change to SPR mode, with IRQs and FIQs still disabled.  */
+	cpsid if, #ARMV7A_CPSR_SPR
 
 	/* Save on the SYS mode stack any registers that may be clobbered,
 	 * namely the SYS mode LR and all other caller-save general purpose
@@ -66,11 +66,11 @@ irq_handler:
 	 * above).  */
 	add sp, sp, r4
 
-	/* Restore the above-mentioned registers from the SYS mode stack. */
+	/* Restore the above-mentioned registers from the SPR mode stack. */
 	pop {r0-r4, r12, lr}
 
 	/* [Return From Exception Increment After] */
-	/* Load the original SYS-mode CPSR and PC that were saved on the SYS
+	/* Load the original SPR-mode CPSR and PC that were saved on the SPR
 	 * mode stack.  */
 	rfeia sp!
 	.endfunc

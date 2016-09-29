@@ -55,9 +55,9 @@ _endvectors:
 	.func reset_handler
 reset_handler:
 
-	/* Enter SYS mode with all interrupts disabled so the ARM processor is
+	/* Enter SPR mode with all interrupts disabled so the ARM processor is
 	 * in a known state. */
-	cpsid if, #ARMV7A_CPSR_SYS
+	cpsid if, #ARMV7A_CPSR_SPR
 
 	/* Copy the ARM exception table from .init section to address 0,
 	 * including the absolute address table.  Here we assume it is exactly

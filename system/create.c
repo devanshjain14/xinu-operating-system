@@ -60,9 +60,9 @@ pid32	create(
 	prptr->prdesc[2] = CONSOLE;	/* stderr is CONSOLE device	*/
 #endif
 #ifdef ARM_QEMU
-	prptr->prdesc[0] = SERIAL0;	/* stdin  is CONSOLE device	*/
-	prptr->prdesc[1] = SERIAL0;	/* stdout is CONSOLE device	*/
-	prptr->prdesc[2] = SERIAL0;	/* stderr is CONSOLE device	*/
+	prptr->prdesc[0] = SERIAL0;	/* stdin  is SERIAL0 device	*/
+	prptr->prdesc[1] = SERIAL0;	/* stdout is SERIAL0 device	*/
+	prptr->prdesc[2] = SERIAL0;	/* stderr is SERIAL0 device	*/
 #endif
 
 	/* Initialize stack as if the process was called		*/
@@ -85,14 +85,9 @@ pid32	create(
 			*--saddr = 0;
 	}
 	*--saddr = (long)INITRET;	/* push on return address	*/
-#ifdef ARM_BBB
-	*--saddr = (long)0x00000053;	/* CPSR, A, F bits set,		*/
-					/* Supervisor mode		*/
-#endif
-#ifdef ARM_QEMU
-	*--saddr = (long)0x0000015F;	/* CPSR, A, F bits set,		*/
-					/* System  mode		*/
-#endif
+	*--saddr = (long)(ARMV7A_CPSR_SPR | ARMV7A_CPSR_F); /* CPSR, F bit set,		*/
+                                                      /* Supervisor mode		*/
+  
 	prptr->prstkptr = (char *)saddr;
 	restore(mask);
 	return pid;

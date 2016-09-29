@@ -5,8 +5,8 @@ page_fault:
 	.func page_fault
 
 	sub lr, lr, #4
-	srsdb #ARMV7A_CPSR_SYS!
-	cpsid if, #ARMV7A_CPSR_SYS
+	srsdb #ARMV7A_CPSR_SPR!
+	cpsid if, #ARMV7A_CPSR_SPR
 	push {r0-r4, r12, lr}
 	and r4, sp, #4
 	sub sp, sp, r4
