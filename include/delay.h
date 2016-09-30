@@ -3,6 +3,15 @@
 /*
  * Delay units are in microseconds.
  */
+#ifdef X86_GALILEO
+#define	DELAY(n)                                	\
+{                                               	\
+	register int i = 0;				\
+							\
+	while(i < (n * 100)) i++;			\
+}			
+
+#else /* !X86_GALILEO */
 #define	DELAY(n)                                	\
 {                                               	\
 	volatile long N = 2*n;				\
@@ -11,6 +20,7 @@
 		N--;					\
 	}						\
 }
+#endif
 
 /*
  * Delay units are in milli-seconds.
@@ -23,3 +33,4 @@
 		DELAY(1000);				\
 	}						\
 }
+
