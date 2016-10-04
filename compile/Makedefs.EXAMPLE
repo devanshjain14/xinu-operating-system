@@ -1,10 +1,16 @@
 # set the plaform to arm-qemu, arm-bbb, etc.
 PLATFORM=arm-qemu
 
-# COMPILER_ROOT and LIBGCC_LOC are for the cross compiler
+# COMPILER_ROOT and LIBGCC_LOC are for the appropriate compiler 
+#  - the cross compiler when building for ARM or gcc for x86
 # CONF_LFLAGS is for the config program in $XINU_HOME/config
 # Uncomment the appropriate variables for your environment 
 #  and comment or delete the other ones.
+
+# x86 compiler in the VM
+#PLATFORM=x86-galileo
+#COMPILER_ROOT   =      /usr/bin/
+#LIBGCC_LOC      =      /usr/lib/gcc/i686-linux-gnu/4.8.4
 
 # For the Linux VM
 COMPILER_ROOT   =      /usr/bin/arm-none-eabi-

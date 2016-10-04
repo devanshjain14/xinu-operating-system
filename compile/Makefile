@@ -206,6 +206,7 @@ clean:
 	@rm -f $(XINU)
 	@rm -f $(XINUBIN)
 	@rm -f $(XINUBOOT)
+	@rm -f $(XINUXBIN)
 	@rm -f .defs
 
 install: xinu
