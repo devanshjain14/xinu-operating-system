@@ -37,8 +37,29 @@
 #include <delay.h>
 #include <stdio.h>
 #include <string.h>
-#include <am335x_control.h>
-#include <am335x_eth.h>
-#include <armv7a.h>
+
+#ifdef ARM_QEMU
+
+#include <platform/arm-qemu/armv7a.h>
+
+#endif
+
+#ifdef ARM_BBB
+
+#include <platform/arm-bbb/am335x_control.h>
+#include <platform/arm-bbb/am335x_eth.h>
+#include <platform/arm-bbb/armv7a.h>
+
+#endif
+
+#ifdef X86_GALILEO
+
+#include <platform/x86-galileo/pci.h>
+#include <platform/x86-galileo/quark_eth.h>
+#include <platform/x86-galileo/quark_pdat.h>
+#include <platform/x86-galileo/quark_irq.h>
+#include <platform/x86-galileo/multiboot.h>
+
+#endif 
 
 #endif

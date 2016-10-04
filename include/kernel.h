@@ -66,3 +66,4 @@ extern	qid16	readylist;	/* global ID for list of ready processes*/
 
 #define	NULLSTK		8192	/* stack size for null process		*/
 
+

@@ -7,6 +7,8 @@ extern	uint16	girmask;	/* mask of interrupts being serviced	*/
 				/* a bit of 1 corresponds to an		*/
 				/* interrupt that is allowed.		*/
 
+
+/* The rest of this is arm-specific */
 struct intc_bank {
 	uint32	itr;
 	uint32	mir;

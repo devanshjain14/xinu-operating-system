@@ -17,13 +17,30 @@ $(error PLATFORM is not set. Edit your Makedefs file and add 'PLATFORM=arm-qemu'
 endif
 
 ifeq ($(PLATFORM),arm-qemu)
-	PLAT_CFLAGS =  -DARM_QEMU -mcpu=arm1176jz-s -ggdb3 
+
+	ARCH=arm
+	PLAT_CFLAGS = -DARM_QEMU -mcpu=arm1176jz-s -ggdb3 -mno-unaligned-access -marm
 	PLAT_LOADADDR = 0x00010000
+	LDARCH = armelf
+	INCLUDE	= -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
+	LGCC = -L$(LIBGCC_LOC) -lgcc
+
 else ifeq ($(PLATFORM),arm-bbb)
-	PLAT_CFLAGS =  -DARM_BBB -mcpu=cortex-a8 
+
+	ARCH=arm
+	PLAT_CFLAGS = -DARM_BBB -mcpu=cortex-a8 -mno-unaligned-access -marm
 	PLAT_LOADADDR = 0x81000000
+	LDARCH = armelf
+	INCLUDE	= -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
+	LGCC = -L$(LIBGCC_LOC) -lgcc
+
 else ifeq ($(PLATFORM),x86-galileo)
-	PLAT_CFLAGS =   
+
+	ARCH = x86
+	PLAT_CFLAGS = -DX86_GALILEO -march=i586 -m32 
+	LDARCH = elf_i386 
+	INCLUDE	= -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
+	LGCC = 
 endif
 
 TOPDIR		=	..
@@ -34,6 +51,8 @@ OBJCOPY		=	${COMPILER_ROOT}objcopy
 XINU		=	$(TOPDIR)/compile/xinu
 XINUBIN		=	$(TOPDIR)/compile/xinu.bin
 XINUBOOT	=	$(TOPDIR)/compile/xinu.boot
+XINUXBIN	=	$(TOPDIR)/compile/xinu.x86.boot
+BUILDXBIN	=	$(TOPDIR)/compile/bin/buildxbin
 BUILDMAKE	=	$(TOPDIR)/compile/bin/build-make
 MKVERS		=	$(TOPDIR)/compile/bin/mkvers
 
@@ -45,6 +64,7 @@ VERSIONFILE	=	version
 LDSCRIPT	=	ld.script.${PLATFORM}
 REBUILDFLAGS	=	-s $(TOPDIR)/system  debug.c 	\
 			-s $(TOPDIR)/system/platform/$(PLATFORM)\
+			-s $(TOPDIR)/system/platform/$(ARCH)    \
 			-s $(TOPDIR)/lib			\
 			-s $(TOPDIR)/shell  'xsh_rdstest*'      \
 			-s $(TOPDIR)/apps			\
@@ -67,21 +87,29 @@ REBUILDFLAGS    +=	-s $(TOPDIR)/device/tty			\
 			-s $(TOPDIR)/device/lfs			\
 			-s $(TOPDIR)/device/rfs			\
 			-s $(TOPDIR)/net  'arp_dump*'		\
-				'dhcp_dump*'  pxe.c		\
+				'dhcp_dump*'  pxe.c		
 
 else ifeq ($(PLATFORM),x86-galileo)
+REBUILDFLAGS    +=	-s $(TOPDIR)/device/$(PLATFORM)/tty	\
+			-s $(TOPDIR)/device/$(PLATFORM)/eth	\
+			-s $(TOPDIR)/device/$(PLATFORM)/lfs	\
+			-s $(TOPDIR)/device/$(PLATFORM)/nam	\
+			-s $(TOPDIR)/device/$(PLATFORM)/ram	\
+			-s $(TOPDIR)/device/$(PLATFORM)/rds	\
+			-s $(TOPDIR)/device/$(PLATFORM)/rfs	\
+			-s $(TOPDIR)/net  'arp_dump*'		\
+				'dhcp_dump*'  pxe.c		
 endif
 
-INCLUDE		=	-I$(TOPDIR)/include
 DEFS		= 	-DBSDURG -DVERSION=\""`cat $(VERSIONFILE)`"\"
 
 # Compiler flags
-CFLAGS  =  ${PLAT_CFLAGS} -mno-unaligned-access -marm -fno-builtin -fno-stack-protector -nostdlib -c -Wall -O ${DEFS} ${INCLUDE}
+CFLAGS  =  ${PLAT_CFLAGS} -fno-builtin -fno-stack-protector -nostdlib -c -Wall -O ${DEFS} ${INCLUDE}
 SFLAGS  = ${INCLUDE}
 
 # Loader flags
 
-LDFLAGS = -dn -m armelf -Map xinu.map -T ld.script.${PLATFORM}
+LDFLAGS = -dn -m ${LDARCH} -Map xinu.map -T ld.script.${PLATFORM}
 
 all:	xinu
 
@@ -128,11 +156,19 @@ export
 # Specific additional rules and exceptions
 #--------------------------------------------------------------------------------
 
+ifeq ($(PLATFORM),x86-galileo)
 xinu:	Makefile rebuild $(BLDDIRS) $(DEFSFILE) $(DEPSFILE) $(CONFH) $(CONFC) $(LD_LIST) uboot-tool/mkimage
 	@echo;echo 'Loading object files to produce xinu'
-	@$(LD) $(LDFLAGS) $(LD_LIST) -o $(XINU) -L$(LIBGCC_LOC) -lgcc
+	@$(LD) $(LDFLAGS) $(LD_LIST) -o $(XINU) $(LGCC)
+	@$(OBJCOPY) -O binary $(XINU) $(XINUBIN)
+	@$(BUILDXBIN) $(XINUBIN) $(XINUXBIN)
+else
+xinu:	Makefile rebuild $(BLDDIRS) $(DEFSFILE) $(DEPSFILE) $(CONFH) $(CONFC) $(LD_LIST) uboot-tool/mkimage
+	@echo;echo 'Loading object files to produce xinu'
+	@$(LD) $(LDFLAGS) $(LD_LIST) -o $(XINU) $(LGCC)
 	@$(OBJCOPY) -O binary $(XINU) $(XINUBIN)
 	@./uboot-tool/mkimage -A arm -O linux -T kernel -C none -a $(PLAT_LOADADDR) -e $(PLAT_LOADADDR) -d $(XINUBIN) $(XINUBOOT)
+endif
 
 uboot-tool/mkimage: uboot-tool/mkimage.c
 	@echo making mkimage

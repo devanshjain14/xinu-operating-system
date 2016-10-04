@@ -4,8 +4,10 @@
 #include <stddef.h>
 #define UART_BAUD	115200	/* Default console baud rate.		*/
 #define	UART_OUT_IDLE	0x0016	/* determine if transmit idle		*/
-#define	UART_FIFO_SIZE	64	/* chars in UART onboard output FIFO	*/
+#define	UART_FIFO_SIZE	16	/* chars in UART onboard output FIFO	*/
 				/* (16 for later UART chips)		*/
+#define INTEL_QUARK_UART_PCI_DID	0x0936	/* UART PCI Device ID	*/
+#define INTEL_QUARK_UART_PCI_VID	0x8086	/* UART PCI Vendor ID	*/
 #define NUART 1
 /*
  * Control and Status Register (CSR) definintions for the 16550 UART.
@@ -59,11 +61,18 @@ struct	uart_csreg
 /* Definintion of individual bits in control and status registers	*/
 
 /* Divisor values for baud rate */
+#ifdef X86_GALILEO
+#define	UART_DLL	0x00	/* value for low byte of divisor latch	*/
+				/*	DLAB=0				*/
+#define UART_DLM	0x01	/* value for high byte of divisor latch	*/
+				/*	DLAB=1				*/
 
+#else
 #define	UART_DLL	26	/* value for low byte of divisor latch	*/
 				/*	DLAB=0				*/
 #define UART_DLM	0	/* value for high byte of divisor latch	*/
 				/*	DLAB=1				*/
+#endif /* X86_GALILEO */
 
 /* Line control bits */
 

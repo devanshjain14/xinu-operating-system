@@ -38,13 +38,14 @@ struct	etherPkt {
 /* State of the Ethernet interface */
 
 #define	ETH_STATE_FREE		0	/* control block is unused 	*/
-#define	ETH_STATE_DOWN		1	/* interface is currently  	*/
-					/* 	inactive 		*/
+#define	ETH_STATE_DOWN		1	/* interface is inactive  	*/
 #define	ETH_STATE_UP		2	/* interface is currently active*/
 
 /* Ethernet device control functions */
 
 #define	ETH_CTRL_GET_MAC     	1 	/* Get the MAC for this device	*/
+#define ETH_CTRL_ADD_MCAST	2	/* Add a multicast address	*/
+#define ETH_CTRL_REMOVE_MCAST	3	/* Remove a multicast address	*/
 
 /* Ethernet multicast */
 
@@ -54,7 +55,9 @@ struct	etherPkt {
 
 #define ETH_TYPE_3C905C 	1
 #define ETH_TYPE_E1000E 	2
+#define ETH_TYPE_QUARK_ETH 	3	/* Ethernet on Quark board	*/
 
+/* These are specific to the BBB and should probably be moved. */
 #define ETH_PHY_CTLREG	0
 #define ETH_PHY_STATREG	1
 
@@ -66,6 +69,7 @@ struct	etherPkt {
 #define ETH_PHY_CTLREG_FD	0x0100
 
 #define ETH_PHY_STATREG_LINK	0x0004
+/* end BBB-specific */
 
 struct	ethcblk	{
 	byte	state; 		/* ETH_STATE_... as defined above 	*/
@@ -95,7 +99,7 @@ struct	ethcblk	{
 	uint32	txRingSize;	/* size of Tx ring descriptor array	*/
 	uint32	txIrq;		/* Count of Tx interrupt requests       */
 
-	byte	devAddress[ETH_ADDR_LEN];/* MAC address 		*/
+	uint8	devAddress[ETH_ADDR_LEN];/* MAC address 		*/
 
 	uint8	addrLen;	/* Hardware address length	      	*/
 	uint16	mtu;	    	/* Maximum transmission unit (payload)  */
