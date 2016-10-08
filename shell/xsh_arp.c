@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef ETHER0
+
 static	void	arp_dmp();
 /*------------------------------------------------------------------------
  * xsh_arp - display the current ARP cache for an interface
@@ -73,3 +75,4 @@ static	void arp_dmp ()
 	printf("\n");
 	return;
 }
+#endif

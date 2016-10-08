@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef ETHER0
+
 /*------------------------------------------------------------------------
  * xsh_ping - shell command to ping a remote host
  *------------------------------------------------------------------------
@@ -112,3 +114,4 @@ shellcmd xsh_ping(int nargs, char *args[])
 	fprintf(stderr, "host %s is alive\n", args[1]);
 	return 0;
 }
+#endif

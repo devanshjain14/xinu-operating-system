@@ -4,6 +4,8 @@
 #include <string.h>
 #include <stdio.h>
 
+#ifdef ETHER0
+
 /*------------------------------------------------------------------------
  * xsh_ipaddr - obtain and print the IP address, subnet mask and default
  *			router address for each interface that's up
@@ -122,3 +124,4 @@ shellcmd xsh_ipaddr(int nargs, char *args[]) {
 
 	return OK;
 }
+#endif

@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef ETHER0
+
 /*------------------------------------------------------------------------
  * xsh_udpdump - shell command to dump the UDP registered ports
  *------------------------------------------------------------------------
@@ -73,3 +75,4 @@ shellcmd xsh_udpdump(int nargs, char *args[])
 	}
 	return 0;
 }
+#endif

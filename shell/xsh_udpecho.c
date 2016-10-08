@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef ETHER0
+
 /*------------------------------------------------------------------------
  * xsh_udpecho - shell command that can send a message to a remote UDP
  *			echo server and receive a reply
@@ -118,3 +120,4 @@ shellcmd xsh_udpecho(int nargs, char *args[])
 	printf("UDP echo test was successful\n");
 	return 0;
 }
+#endif

@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef ETHER0
+
 /*------------------------------------------------------------------------
  * xsh_udpeserver - shell command that acts as a UDP echo server (is
  *			usually run in background)
@@ -80,3 +82,4 @@ shellcmd xsh_udpeserver(int nargs, char *args[])
 	}
 	return 0;
 }
+#endif
