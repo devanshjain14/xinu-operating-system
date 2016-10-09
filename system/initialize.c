@@ -1,4 +1,4 @@
-/* initialize.c - nulluser, sysinit, sizmem */
+/* initialize.c - nulluser, sysinit */
 
 /* Handle system initialization and become the null process */
 
@@ -6,7 +6,12 @@
 #include <string.h>
 #ifdef ARM_QEMU
 #include <platform.h>
+struct platform platform;
 #endif /* ARM_QEMU */
+
+/* Control sequence to reset the console colors and cusor positiion	*/
+#define	CONSOLE_RESET	" \033[0m\033[2J\033[;H"
+void am335x_init(void);
 
 extern	void	start(void);	/* Start of Xinu code			*/
 extern	void	*_end;		/* End of Xinu code			*/
@@ -18,8 +23,6 @@ extern	void xdone(void);	/* System "shutdown" procedure		*/
 static	void sysinit(); 	/* Internal system initialization	*/
 extern	void meminit(void);	/* Initializes the free memory list	*/
 
-void am335x_init(void);
-
 /* Declarations of major kernel variables */
 
 struct	procent	proctab[NPROC];	/* Process table			*/
@@ -30,9 +33,6 @@ struct	memblk	memlist;	/* List of free memory blocks		*/
 
 int	prcount;		/* Total number of live processes	*/
 pid32	currpid;		/* ID of currently executing process	*/
-#ifdef ARM_QEMU
-struct platform platform;
-#endif /* ARM_QEMU */
 
 /*------------------------------------------------------------------------
  * nulluser - initialize the system and become the null process
@@ -56,7 +56,11 @@ void	nulluser()
 	/* Initialize the system */
 	sysinit();
 
+  #ifdef X86_GALILEO
+	kprintf(CONSOLE_RESET);
+  #endif
 	kprintf("\n\r%s\n\n\r", VERSION);
+
 
 	/* Output Xinu memory layout */
 	free_mem = 0;
@@ -82,6 +86,12 @@ void	nulluser()
 	/* Enable interrupts */
 
 	enable();
+
+  #ifdef X86_GALILEO
+	/* Initialize the network stack and start processes */
+
+	net_init();
+  #endif 
 
 	#ifdef MMU
 	/* Initialize MMU(Paging) */
@@ -119,12 +129,12 @@ static	void	sysinit()
 
 	platinit();
 
-	/* Initialize the interrupt vectors on BBB.
-	   This is done elsewhere in Embedded Xinu (the QEMU version)
+	/* Initialize the interrupt vectors.
+	   Note: this is done elsewhere in Embedded Xinu (the QEMU version)
 	*/
-#ifdef ARM_BBB
+#ifndef ARM_QEMU
 	initevec();
-#endif /* ARM_BBB */
+#endif /* ! ARM_QEMU */
   
 	/* Initialize free memory list */
 	
