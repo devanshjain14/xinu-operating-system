@@ -3,6 +3,7 @@
 #include <xinu.h>
 #include <stdio.h>
 #include <string.h>
+#include <dns.h>
 
 /*------------------------------------------------------------------------
  * xsh_ping - shell command to ping a remote host

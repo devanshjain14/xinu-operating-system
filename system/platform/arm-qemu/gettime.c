@@ -22,9 +22,6 @@ status	gettime(
 	  uint32  *timvar		/* Location to store the result	*/
 	)
 {
-	uint32	now;			/* Current time (UCT)		*/
-	int32	retval;			/* Return value from call	*/
-
 	/* Get current time in UCT representation (GMT) */
 
 	//retval = getutime(&now);

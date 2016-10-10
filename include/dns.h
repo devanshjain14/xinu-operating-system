@@ -47,3 +47,5 @@ struct	dns_rr {
 	uint16	*rdlen;		/* RR RD Length		*/
 	char	*rdata;		/* RR Data		*/
 };
+
+uint32	dns_qa(char* dname);
