@@ -10,7 +10,7 @@ void	clkhandler()
 {
 
 	static uint32 count1000 = 1000;	/* variable to count 1000ms */
-	volatile struct am335x_timer1ms *csrptr = 0x44E31000;
+	volatile struct am335x_timer1ms *csrptr = (struct am335x_timer1ms *)0x44E31000;
 					/* Pointer to timer CSR	    */
 
 	/* If there is no interrupt, return */

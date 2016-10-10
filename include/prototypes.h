@@ -117,6 +117,8 @@ extern	syscall	getc(did32);
 /* in file getitem.c */
 extern	pid32	getfirst(qid16);
 
+pid32 getitem(pid32);
+
 /* in file getmem.c */
 extern	char	*getmem(uint32);
 
@@ -364,6 +366,11 @@ extern	syscall	ptsend(int32, umsg32);
 
 /* in file putc.c */
 extern	syscall	putc(did32, char);
+
+/* in file queue.c */
+
+pid32 dequeue(qid16);
+pid32 enqueue(pid32, qid16);
 
 /* in file ramclose.c */
 extern	devcall	ramclose(struct dentry *);
@@ -629,7 +636,7 @@ devcall loopbackGetc(struct dentry *);
 devcall loopbackPutc(struct dentry *, char);
 devcall loopbackControl(struct dentry *, int, long, long);
 
-syscall kputc(uchar c, struct dentry *devptr);
+syscall kprintf(char *fmt, ...);
 #endif /* ARM_QEMU */
 
 #ifdef ARM_BBB

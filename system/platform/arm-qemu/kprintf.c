@@ -7,6 +7,8 @@
 #include <kernel.h>
 #include <stdarg.h>
 
+syscall kvprintf(const char *format, va_list ap);
+
 /**
  * @ingroup uartgeneric
  *

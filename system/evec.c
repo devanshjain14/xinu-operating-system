@@ -81,8 +81,8 @@ void	irq_dispatch()
 
 	/* If a handler is set for the interrupt, call it */
 
-	if(intc_vector[xnum]) {
-		handler = intc_vector[xnum];
+	if (intc_vector[xnum]) {
+		handler = (interrupt(*)(void))intc_vector[xnum];
 		handler(xnum);
 	}
 

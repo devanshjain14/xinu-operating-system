@@ -48,6 +48,8 @@ void restore(intmask);
 void enable_irq(intmask);
 void disable_irq(intmask);
 
+int32 initintc(void);
+
 #define INTC_SYSCONFIG_SOFTRESET	0x00000002
 #define INTC_SYSSTATUS_RESETDONE	0x00000001
 

@@ -9,6 +9,9 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+void	_doprnt(const char *, va_list, int (*)(int, int), int);
+int kputc(int, int);
+
 /**
  * @ingroup uartgeneric
  *
@@ -26,14 +29,13 @@
  */
 syscall kvprintf(const char *format, va_list ap)
 {
-    int retval;
     intmask im;
 
     /* Note: it isn't strictly necessary to disable global interrupts here, but
      * it prevents kprintf()'s from stepping on each other toes if you happen to
      * call kprintf() from an interrupt handler.  */
     im = disable();
-    retval = _doprnt(format, ap, (int (*)(int, int))kputc, (int)&devtab[SERIAL0]);
+    _doprnt(format, ap, (int (*)(int, int))kputc, (int)&devtab[SERIAL0]);
     restore(im);
-    return retval;
+    return OK;
 }
