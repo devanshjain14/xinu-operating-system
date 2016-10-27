@@ -11,26 +11,26 @@ uint32 __attribute__((aligned(16384))) page_table[NPROC][NUM_PAGE_TABLE_ENTRIES]
 void initializeMMU(void) {
     
     int i,j,k=0;
-    for (i = 0; i < 264; i++){ // 258
-	for (j = 0; j < NPROC; j++){
-        	page_table[j][i] = i << 20 | (3 << 10) | CACHE_DISABLED;
-		}
-	}
-	
-	for (j = 264; j <264+(2064-264)/NPROC; j++){ 
-		for (i=264,k = 2; k < NPROC;i++, k++){
-	        	page_table[k][j] = i << 20 | (3 << 10) | CACHE_DISABLED;
-		}
-	}
-    	for (i = 2064; i < NUM_PAGE_TABLE_ENTRIES; i++){
-		for (j = 0; j < NPROC; j++){
-        		page_table[j][i] = i << 20 | (3 << 10) | CACHE_DISABLED;
-		}
-	}
-	setPageTable();    
-	FlushTLB();
-    	setAccessControl();   
-	enableMMU(); 
+    for (i = 0; i < 274; i++){ // 258
+      for (j = 0; j < NPROC; j++){
+	page_table[j][i] = i << 20 | (3 << 10) | CACHE_DISABLED;
+      }
+    }
+    for (j = 275; j <275+(512-275)/NPROC; j++){ 
+      for (i=275,k = 2; k < NPROC;i++, k++){
+	page_table[k][j] = i << 20 | (3 << 10) | CACHE_DISABLED;
+      }
+    }
+    for (i = 510; i < 512; i++){ // 258
+      for (j = 0; j < NPROC; j++){
+	page_table[j][i] = i << 20 | (3 << 10) | CACHE_DISABLED;
+      }
+    }
+     
+    setPageTable();    
+    FlushTLB();
+    setAccessControl();   
+    enableMMU(); 
 }
 
 
