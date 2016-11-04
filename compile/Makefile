@@ -166,7 +166,7 @@ configure:
 
 clean:
 	@echo removing .o files
-	@rm -f ${LD_LIST}
+	@rm -f binaries/*.o
 	@echo   removing configuration files ...
 	@rm -f $(CONFH) $(CONFC)
 	@(cd $(TOPDIR)/config; make clean)
