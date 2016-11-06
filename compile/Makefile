@@ -24,7 +24,7 @@ ifeq ($(PLATFORM),arm-qemu)
 	PLAT_CFLAGS =  -DARM_QEMU $(VM) -mcpu=arm1176jz-s -ggdb3
 	PLAT_LOADADDR = 0x00010000
 else ifeq ($(PLATFORM),arm-bbb)
-	PLAT_CFLAGS =  -DARM_BBB -mcpu=cortex-a8
+	PLAT_CFLAGS =  -DARM_BBB -mcpu=cortex-a8 -g
 	PLAT_LOADADDR = 0x81000000
 else ifeq ($(PLATFORM),x86-galileo)
 	PLAT_CFLAGS =
