@@ -116,6 +116,8 @@ extern	pid32	getfirst(qid16);
 extern	pid32	getlast(qid16);
 extern	pid32	getitem(pid32);
 
+pid32 getitem(pid32);
+
 /* in file getmem.c */
 extern	char	*getmem(uint32);
 
@@ -364,6 +366,11 @@ extern	syscall	ptsend(int32, umsg32);
 
 /* in file putc.c */
 extern	syscall	putc(did32, char);
+
+/* in file queue.c */
+
+pid32 dequeue(qid16);
+pid32 enqueue(pid32, qid16);
 
 /* in file ramclose.c */
 extern	devcall	ramclose(struct dentry *);

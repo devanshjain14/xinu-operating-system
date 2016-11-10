@@ -16,6 +16,10 @@ ifndef PLATFORM
 $(error PLATFORM is not set. Edit your Makedefs file and add 'PLATFORM=arm-qemu'or 'PLATFORM=arm-bbb')
 endif
 
+ifeq ($(MMU),true)
+	VM = -DMMU
+endif
+
 ifeq ($(PLATFORM),arm-qemu)
 
 	ARCH=arm
@@ -76,7 +80,7 @@ REBUILDFLAGS 	+=	-s $(TOPDIR)/device/tty			\
 			-s $(TOPDIR)/device/lfs			\
 			-s $(TOPDIR)/device/uart		\
 			-s $(TOPDIR)/device/uart-pl011		\
-			-s $(TOPDIR)/device/loopback		
+			-s $(TOPDIR)/device/loopback
 
 else ifeq ($(PLATFORM),arm-bbb)
 REBUILDFLAGS    +=	-s $(TOPDIR)/device/tty			\
@@ -174,7 +178,7 @@ uboot-tool/mkimage: uboot-tool/mkimage.c
 	@echo making mkimage
 	@(cd uboot-tool; make)
 
-$(BLDDIRS): 
+$(BLDDIRS):
 	@mkdir -p $(BLDDIRS)
 
 objects: $(LD_LIST)
@@ -198,7 +202,7 @@ configure:
 
 clean:
 	@echo removing .o files
-	@rm -f ${LD_LIST}
+	@rm -f binaries/*.o
 	@echo   removing configuration files ...
 	@rm -f $(CONFH) $(CONFC)
 	@(cd $(TOPDIR)/config; make clean)
@@ -216,7 +220,7 @@ etags:
 	@(cd $(TOPDIR); find . -name '*.[chS]' -exec etags -a {} \;)
 
 qemu: xinu
-	export QEMU_AUDIO_DRV=wav; export QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav; qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176 -kernel xinu.boot 
+	export QEMU_AUDIO_DRV=wav; export QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav; qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176 -kernel xinu.boot
 
 qemu-gdb: xinu
 		export QEMU_AUDIO_DRV=wav; export QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav;qemu-system-arm -M versatilepb -m 512M -nographic -cpu arm1176 -kernel xinu.boot -S -gdb tcp::${GPORT}

@@ -195,4 +195,4 @@ struct	eth_a_tx_desc {
 #define ETH_AM335X_RXINT		41
 #define ETH_AM335X_TXINT		42
 
-#define	ETH_AM335X_INIT_DELAY	1000000
+#define	ETH_AM335X_INIT_DELAY	2000000

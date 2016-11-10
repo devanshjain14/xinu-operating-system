@@ -18,7 +18,6 @@ int32	rfscomm (
 	int32	retval;			/* Return value			*/
 	int32	seq;			/* Sequence for this exchange	*/
 	int16	rtype;			/* Reply type in host byte order*/
-	int32	slot;			/* UDP slot			*/
 
 	/* For the first time after reboot, register the server port */
 

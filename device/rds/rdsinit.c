@@ -15,7 +15,7 @@ devcall	rdsinit (
 	struct	rdscblk	*rdptr;		/* Ptr to device contol block	*/
 	struct	rdbuff	*bptr;		/* Ptr to buffer in memory	*/
 					/*   used to form linked list	*/
-	struct	rdbuff	*pptr;		/* Ptr to previous buff on list	*/
+	struct	rdbuff	*pptr = NULL;		/* Ptr to previous buff on list	*/
 	struct	rdbuff	*buffend;	/* Last address in buffer memory*/
 	uint32	size;			/* Total size of memory needed	*/
 					/*   buffers			*/
@@ -28,7 +28,7 @@ devcall	rdsinit (
 
 	rdptr->rd_state = RD_FREE;
 	rdptr->rd_id[0] = NULLCH;
-	
+
 	/* Set initial message sequence number */
 
 	rdptr->rd_seq = 1;
@@ -68,7 +68,10 @@ devcall	rdsinit (
 		pptr->rd_status = RD_INVALID;	/* Buffer is empty	*/
 		pptr->rd_next = bptr;		/* Point to next buffer */
 	}
-	pptr->rd_next = (struct rdbuff *) NULL;	/* Last buffer on list	*/
+
+	if (pptr != NULL) {
+		pptr->rd_next = (struct rdbuff *) NULL;	/* Last buffer on list	*/
+	}
 
 	/* Create the request list and available buffer semaphores */
 
