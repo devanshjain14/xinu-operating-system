@@ -1,12 +1,12 @@
-#########################################################################
-#									#
-#									#
-#  Makefile for the Xinu operating system                               #
-#									#
-#  includes: .deps and .defs						#
-#									#
-#									#
-#########################################################################
+#####################################################################
+#                                                                   #
+#                                                                   #
+#  Makefile for the Xinu operating system                           #
+#                                                                   #
+#  includes: .deps and .defs                                        #
+#                                                                   #
+#                                                                   #
+#####################################################################
 include Makedefs
 
 NODE=0
@@ -16,12 +16,8 @@ ifndef PLATFORM
 $(error PLATFORM is not set. Edit your Makedefs file and add 'PLATFORM=arm-qemu'or 'PLATFORM=arm-bbb')
 endif
 
-ifeq ($(MMU),true)
-	VM = -DMMU
-endif
-
 ifeq ($(PLATFORM),arm-qemu)
-	PLAT_CFLAGS =  -DARM_QEMU $(VM) -mcpu=arm1176jz-s -ggdb3
+	PLAT_CFLAGS =  -DARM_QEMU -mcpu=arm1176jz-s -ggdb3
 	PLAT_LOADADDR = 0x00010000
 else ifeq ($(PLATFORM),arm-bbb)
 	PLAT_CFLAGS =  -DARM_BBB -mcpu=cortex-a8 -g
