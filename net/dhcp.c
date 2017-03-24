@@ -311,6 +311,7 @@ uint32	getlocalip_boot(uint32* boot_server, char* boot_file, uint32* size)
 	}
 
 	for (i = 0; i < DHCP_RETRY; i++) {
+		kprintf("Sending DHCPREQUEST...\n");
 		udp_sendto(slot, IP_BCAST, UDP_DHCP_SPORT, (char *)&dmsg_snd, len);
 
 		/* Read 3 incoming DHCP messages and check for an offer	*/
@@ -318,7 +319,7 @@ uint32	getlocalip_boot(uint32* boot_server, char* boot_file, uint32* size)
 		/* 	arrives.					*/
 
 		for (j=0; j<3; j++) {
-			inlen = udp_recv(slot, (char *)&dmsg_rvc, sizeof(struct dhcpmsg),2000);
+			inlen = udp_recv(slot, (char *)&dmsg_rvc, sizeof(struct dhcpmsg),1000);
 			if (inlen == TIMEOUT) {
 				continue;
 			} else if (inlen == SYSERR) {

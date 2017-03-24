@@ -4,14 +4,6 @@
 
 #include <xinu.h>
 #include <string.h>
-#ifdef ARM_QEMU
-#include <platform.h>
-struct platform platform;
-#endif /* ARM_QEMU */
-
-/* Control sequence to reset the console colors and cusor positiion	*/
-#define	CONSOLE_RESET	" \033[0m\033[2J\033[;H"
-void am335x_init(void);
 
 extern	void	start(void);	/* Start of Xinu code			*/
 extern	void	*_end;		/* End of Xinu code			*/
@@ -19,9 +11,9 @@ extern	void	*_end;		/* End of Xinu code			*/
 /* Function prototypes */
 
 extern	void main(void);	/* Main is the first process created	*/
-extern	void xdone(void);	/* System "shutdown" procedure		*/
 static	void sysinit(); 	/* Internal system initialization	*/
 extern	void meminit(void);	/* Initializes the free memory list	*/
+local	process startup(void);	/* Process to finish startup tasks	*/
 
 /* Declarations of major kernel variables */
 
@@ -33,6 +25,12 @@ struct	memblk	memlist;	/* List of free memory blocks		*/
 
 int	prcount;		/* Total number of live processes	*/
 pid32	currpid;		/* ID of currently executing process	*/
+
+extern uint32 nsaddr;
+
+/* Control sequence to reset the console colors and cusor positiion	*/
+
+#define	CONSOLE_RESET	" \033[0m\033[2J\033[;H"
 
 /*------------------------------------------------------------------------
  * nulluser - initialize the system and become the null process
@@ -52,15 +50,10 @@ void	nulluser()
 {	
 	struct	memblk	*memptr;	/* Ptr to memory block		*/
 	uint32	free_mem;		/* Total amount of free memory	*/
-
+	
 	/* Initialize the system */
+
 	sysinit();
-
-  #ifdef X86_GALILEO
-	kprintf(CONSOLE_RESET);
-  #endif
-	kprintf("\n\r%s\n\n\r", VERSION);
-
 
 	/* Output Xinu memory layout */
 	free_mem = 0;
@@ -70,7 +63,7 @@ void	nulluser()
 	}
 	kprintf("%10d bytes of free memory.  Free list:\n", free_mem);
 	for (memptr=memlist.mnext; memptr!=NULL;memptr = memptr->mnext) {
-	    kprintf("           [0x%08X to 0x%08X]\r\n",
+	    kprintf("           [0x%08X to 0x%08X]\n",
 		(uint32)memptr, ((uint32)memptr) + memptr->mlength - 1);
 	}
 
@@ -87,22 +80,15 @@ void	nulluser()
 
 	enable();
 
-  #ifdef X86_GALILEO
+#if defined(X86_QEMU) || defined(X86_GALILEO)
 	/* Initialize the network stack and start processes */
-
+	
 	net_init();
-  #endif 
+#endif
+	/* Create a process to finish startup and start main */
 
-	#ifdef MMU
-	/* Initialize MMU(Paging) */
-	initializeMMU();
-	#endif /*MMU*/
-
-	/* Create a process to execute function main() */
-
-	resume (
-	   create((void *)main, INITSTK, INITPRIO, "Main process", 0,
-           NULL));
+	resume(create((void *)startup, INITSTK, INITPRIO,
+					"Startup process", 0, NULL));
 
 	/* Become the Null process (i.e., guarantee that the CPU has	*/
 	/*  something to run when no other process is ready to execute)	*/
@@ -113,9 +99,61 @@ void	nulluser()
 
 }
 
+
 /*------------------------------------------------------------------------
  *
- * sysinit - intialize all Xinu data structures and devices
+ * startup  -  Finish startup takss that cannot be run from the Null
+ *		  process and then create and resume the main process
+ *
+ *------------------------------------------------------------------------
+ */
+local process	startup(void)
+{
+#ifdef ETHER0 /* if there's eth networking... */
+	
+	uint32	ipaddr;			/* Computer's IP address	*/
+	char	str[128];		/* String used to format output	*/
+	
+	/* Use DHCP to obtain an IP address and format it */
+	kprintf("Attempting to get an IP address via DHCP...(please wait)\n");
+	
+	ipaddr = getlocalip();
+	if ((int32)ipaddr == SYSERR) {
+		kprintf("Cannot DHCP an IP address, performing static config\n");
+		
+		char x_ipaddr[] = "192.168.1.101";
+		char x_router[] = "192.168.1.255";
+		
+		/* Start the network */
+		netstart(x_ipaddr,x_router);
+		nsaddr = 0x800a0c10;
+	} else {
+		/* Print the IP in dotted decimal and hex */
+		ipaddr = NetData.ipucast;
+		sprintf(str, "%d.%d.%d.%d",
+			(ipaddr>>24)&0xff, (ipaddr>>16)&0xff,
+			(ipaddr>>8)&0xff,        ipaddr&0xff);
+	
+		kprintf("Obtained IP address  %s   (0x%08x)\n", str,
+								ipaddr);
+	}
+	
+#endif
+	
+	/* Create a process to execute function main() */
+
+	resume(create((void *)main, INITSTK, INITPRIO,
+					"Main process", 0, NULL));
+
+	/* Startup process exits at this point */
+
+	return OK;
+}
+
+
+/*------------------------------------------------------------------------
+ *
+ * sysinit  -  Initialize all Xinu data structures and devices
  *
  *------------------------------------------------------------------------
  */
@@ -123,11 +161,18 @@ static	void	sysinit()
 {
 	int32	i;
 	struct	procent	*prptr;		/* Ptr to process table entry	*/
-	struct	sentry	*semptr;	/* Prr to semaphore table entry	*/
+	struct	sentry	*semptr;	/* Ptr to semaphore table entry	*/
 
 	/* Platform Specific Initialization */
 
 	platinit();
+	
+	/* Reset the console */
+
+#if defined(X86_QEMU) || defined(X86_GALILEO)
+	kprintf(CONSOLE_RESET);
+#endif
+	kprintf("\n%s\n\n", VERSION);
 
 	/* Initialize the interrupt vectors.
 	   Note: this is done elsewhere in Embedded Xinu (the QEMU version)
@@ -135,7 +180,7 @@ static	void	sysinit()
 #ifndef ARM_QEMU
 	initevec();
 #endif /* ! ARM_QEMU */
-  
+	
 	/* Initialize free memory list */
 	
 	meminit();
@@ -199,7 +244,7 @@ static	void	sysinit()
 #ifdef ARM_BBB
 	am335x_init();
 #endif /* ARM_BBB */
-
+	
 	return;
 }
 

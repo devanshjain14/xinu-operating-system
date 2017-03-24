@@ -17,27 +17,39 @@ $(error PLATFORM is not set. Edit your Makedefs file and add 'PLATFORM=arm-qemu'
 endif
 
 ifeq ($(PLATFORM),arm-qemu)
-	PLAT_CFLAGS =  -DARM_QEMU -mcpu=arm1176jz-s -ggdb3
+
+	ARCH          = arm
+	PLAT_CFLAGS   = -DARM_QEMU -mcpu=arm1176jz-s -ggdb3 -O
 	PLAT_LOADADDR = 0x00010000
-	LDARCH = armelf
-	INCLUDE	= -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
-	LGCC = -L$(LIBGCC_LOC) -lgcc
+	LDARCH        = armelf
+	INCLUDE	      = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
+	LGCC          = -L$(LIBGCC_LOC) -lgcc
 
 else ifeq ($(PLATFORM),arm-bbb)
 
-	ARCH=arm
-	PLAT_CFLAGS = -DARM_BBB -mcpu=cortex-a8 -mno-unaligned-access -marm
+	ARCH          = arm
+	PLAT_CFLAGS   = -DARM_BBB -mcpu=cortex-a8 -mno-unaligned-access -marm -O
 	PLAT_LOADADDR = 0x81000000
-	LDARCH = armelf
-	INCLUDE	= -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
-	LGCC = -L$(LIBGCC_LOC) -lgcc
+	LDARCH        = armelf
+	INCLUDE	      = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
+	LGCC          = -L$(LIBGCC_LOC) -lgcc
+
+else ifeq ($(PLATFORM),x86-qemu)
+
+	ARCH        = x86
+	BRELOC      = 0x150000
+	BOOTPLOC    = 0x150000
+	PLAT_CFLAGS = -DX86_QEMU -DBRELOC=${BRELOC} -DBOOTPLOC=${BOOTPLOC} -march=i586 -m32 -O0
+	LDARCH      = elf_i386 
+	INCLUDE	    = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
+	LGCC        =
 
 else ifeq ($(PLATFORM),x86-galileo)
 
-	ARCH = x86
-	PLAT_CFLAGS = -DX86_GALILEO -march=i586 -m32 
-	LDARCH = elf_i386 
-	INCLUDE	= -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
+	ARCH        = x86
+	PLAT_CFLAGS = -DX86_GALILEO -march=i586 -m32 -O
+	LDARCH      = elf_i386 
+	INCLUDE	    = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
 	LGCC = 
 endif
 
@@ -87,7 +99,7 @@ REBUILDFLAGS    +=	-s $(TOPDIR)/device/tty			\
 			-s $(TOPDIR)/net  'arp_dump*'		\
 				'dhcp_dump*'  pxe.c		
 
-else ifeq ($(PLATFORM),x86-galileo)
+else ifeq ($(ARCH),x86)
 REBUILDFLAGS    +=	-s $(TOPDIR)/device/$(PLATFORM)/tty	\
 			-s $(TOPDIR)/device/$(PLATFORM)/eth	\
 			-s $(TOPDIR)/device/$(PLATFORM)/lfs	\
@@ -102,7 +114,7 @@ endif
 DEFS		= 	-DBSDURG -DVERSION=\""`cat $(VERSIONFILE)`"\"
 
 # Compiler flags
-CFLAGS  =  ${PLAT_CFLAGS} -fno-builtin -fno-stack-protector -nostdlib -c -Wall -O ${DEFS} ${INCLUDE}
+CFLAGS  =  ${PLAT_CFLAGS} -fno-builtin -fno-stack-protector -nostdlib -c -Wall ${DEFS} ${INCLUDE}
 SFLAGS  = ${INCLUDE}
 
 # Loader flags
@@ -154,17 +166,12 @@ export
 # Specific additional rules and exceptions
 #--------------------------------------------------------------------------------
 
-ifeq ($(PLATFORM),x86-galileo)
 xinu:	Makefile rebuild $(BLDDIRS) $(DEFSFILE) $(DEPSFILE) $(CONFH) $(CONFC) $(LD_LIST) uboot-tool/mkimage
 	@echo;echo 'Loading object files to produce xinu'
 	@$(LD) $(LDFLAGS) $(LD_LIST) -o $(XINU) $(LGCC)
 	@$(OBJCOPY) -O binary $(XINU) $(XINUBIN)
 	@$(BUILDXBIN) $(XINUBIN) $(XINUXBIN)
-else
-xinu:	Makefile rebuild $(BLDDIRS) $(DEFSFILE) $(DEPSFILE) $(CONFH) $(CONFC) $(LD_LIST) uboot-tool/mkimage
-	@echo;echo 'Loading object files to produce xinu'
-	@$(LD) $(LDFLAGS) $(LD_LIST) -o $(XINU) $(LGCC)
-	@$(OBJCOPY) -O binary $(XINU) $(XINUBIN)
+ifneq (,$(filter $(PLATFORM),arm-bbb arm-qemu))
 	@./uboot-tool/mkimage -A arm -O linux -T kernel -C none -a $(PLAT_LOADADDR) -e $(PLAT_LOADADDR) -d $(XINUBIN) $(XINUBOOT)
 endif
 

@@ -4,8 +4,8 @@
 
 /* Embedded Xinu, Copyright (C) 2009, 2013.  All rights reserved. */
 
-#include <kernel.h>
 #include <stdarg.h>
+#include <kernel.h>
 
 syscall kvprintf(const char *format, va_list ap);
 

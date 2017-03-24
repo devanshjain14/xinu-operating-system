@@ -7,7 +7,7 @@ extern	int32	slnonempty;	/* nonzero if sleepq is nonempty	*/
 extern	int32	*sltop;		/* ptr to key in first item on sleepq	*/
 extern	uint32	preempt;	/* preemption counter			*/
 
-#ifdef X86_GALILEO
+#if defined(X86_GALILEO) || defined(X86_QEMU)
 /* Intel 8254-2 clock chip constants */
 
 #define CLOCKBASE       0x40            /* I/O base port of clock chip  */

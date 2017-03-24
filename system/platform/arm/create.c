@@ -30,7 +30,7 @@ pid32	create(
 	mask = disable();
 	if (ssize < MINSTK)
 		ssize = MINSTK;
-	ssize = (uint32) roundmb(ssize);
+	ssize = (uint32) roundew(ssize);
 	if (((saddr = (uint32 *)getstk(ssize)) ==
 	    (uint32 *)SYSERR ) ||
 	    (pid=newpid()) == SYSERR || priority < 1 ) {
@@ -53,10 +53,8 @@ pid32	create(
 	prptr->prparent = (pid32)getpid();
 	prptr->prhasmsg = FALSE;
 
-  /* Should move architecture-specific initialization to its own file */
-
 	/* set up initial device descriptors for the shell		*/
-#if defined  (ARM_BBB) || (X86_GALILEO)
+#ifdef ARM_BBB
 	prptr->prdesc[0] = CONSOLE;	/* stdin  is CONSOLE device	*/
 	prptr->prdesc[1] = CONSOLE;	/* stdout is CONSOLE device	*/
 	prptr->prdesc[2] = CONSOLE;	/* stderr is CONSOLE device	*/
@@ -68,8 +66,6 @@ pid32	create(
 #endif
 
 	/* Initialize stack as if the process was called		*/
-
-#if defined (ARM_BBB) || (ARM_QEMU)
 
 	*saddr = STACKMAGIC;
 	savsp = (uint32)saddr;
@@ -93,18 +89,8 @@ pid32	create(
                                                       /* Supervisor mode		*/
   
 	prptr->prstkptr = (char *)saddr;
-
-#else /*not ARM_* so X86 */
-
-	*saddr = STACKMAGIC;
-	savsp = (uint32)saddr;
-
-	/* Push arguments */
-	a = (uint32 *)(&nargs + 1);	/* Start of args		*/
-	a += nargs -1;			/* Last argument		*/
-	for ( ; nargs > 0 ; nargs--)	/* Machine dependent; copy args	*/
-		*--saddr = *a--;	/*   onto created process' stack*/
-	*--saddr = (long)INITRET;	/* Push on return address	*/
+	restore(mask);
+	return pid;
 
 	/* The following entries on the stack must match what ctxsw	*/
 	/*   expects a saved process state to contain: ret address,	*/
@@ -132,11 +118,8 @@ pid32	create(
 	*--saddr = 0;		/* %esi */
 	*--saddr = 0;		/* %edi */
 	*pushsp = (unsigned long) (prptr->prstkptr = (char *)saddr);
-#endif
-
 	restore(mask);
 	return pid;
-
 }
 
 /*------------------------------------------------------------------------

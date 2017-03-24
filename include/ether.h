@@ -41,11 +41,27 @@ struct	etherPkt {
 #define	ETH_STATE_DOWN		1	/* interface is inactive  	*/
 #define	ETH_STATE_UP		2	/* interface is currently active*/
 
+#ifndef X86_QEMU /* standard ETH_CTRL */
 /* Ethernet device control functions */
 
 #define	ETH_CTRL_GET_MAC     	1 	/* Get the MAC for this device	*/
 #define ETH_CTRL_ADD_MCAST	2	/* Add a multicast address	*/
 #define ETH_CTRL_REMOVE_MCAST	3	/* Remove a multicast address	*/
+
+#else /* e1000e for X86_QEMU */
+
+/* Ethernet device control functions */
+
+#define ETH_CTRL_GET_MAC        1       /* Get the MAC for this device  */
+#define ETH_CTRL_SET_MAC        2       /* Set multicast MAC in a slot  */
+#define ETH_CTRL_ADD_MCAST      3       /* Add a multicast address      */
+#define ETH_CTRL_REMOVE_MCAST   4       /* Remove a multicast address   */
+
+/* NIC hardware types */
+
+#define NIC_TYPE_82545EM        1       /* The only possibility...      */
+
+#endif
 
 /* Ethernet multicast */
 

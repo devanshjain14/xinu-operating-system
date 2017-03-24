@@ -8,12 +8,10 @@
  * kputc  -  use polled I/O to write a character to the console
  *------------------------------------------------------------------------
  */
-syscall kputc(byte c)	/* Character to write	*/
+syscall kputc(byte c, struct dentry *devptr)	/* Character to write	*/
 {
-	struct	dentry	*devptr;
 	volatile struct uart_csreg *regptr;
 
-	devptr = (struct dentry *) &devtab[CONSOLE];
 	regptr = (struct uart_csreg *)devptr->dvcsr;
 
 	/* Fail if no console device was found */
@@ -44,14 +42,12 @@ syscall kputc(byte c)	/* Character to write	*/
  * kgetc - use polled I/O to read a character from the console serial line
  *------------------------------------------------------------------------
  */
-syscall kgetc(void)
+syscall kgetc(struct dentry *devptr)
 {
 	int irmask;
 	volatile struct uart_csreg *regptr;
 	byte c;
-	struct	dentry	*devptr;
 
-	devptr = (struct dentry *) &devtab[CONSOLE];
 	regptr = (struct uart_csreg *)devptr->dvcsr;
 
 	/* Fail if no console device was found */
@@ -72,18 +68,18 @@ syscall kgetc(void)
 	return c;
 }
 
-extern	void	_doprnt(char *, va_list ap, int (*)(int));
+extern	void	_doprnt(const char *, va_list ap, int (*)(int,void*), void*);
 
 /*------------------------------------------------------------------------
  * kprintf  -  use polled I/O to print formatted output on the console
  *------------------------------------------------------------------------
  */
-syscall kprintf(char *fmt, ...)
+syscall kprintf(const char *fmt, ...)
 {
 	va_list ap;
 
 	va_start(ap, fmt);
-	_doprnt(fmt, ap, (int (*)(int))kputc);
+	_doprnt(fmt, ap, (int (*)(int,void*))kputc, &devtab[CONSOLE]);
 	va_end(ap);
 	return OK;
 }

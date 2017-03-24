@@ -106,6 +106,8 @@ struct	lfdbfree {
 
 /* Format of the file system directory, either on disk or in memory */
 
+#ifndef X86_QEMU
+
 #pragma pack(2)
 struct	lfdir	{			/* Entire directory on disk	*/
 	dbid32	lfd_dfree;		/* List of free d-blocks on disk*/
@@ -115,6 +117,29 @@ struct	lfdir	{			/* Entire directory on disk	*/
 	char	padding[20];		/* Unused chars in directory blk*/
 };
 #pragma pack()
+
+#else /* X86-QEMU LFS specifics */
+
+/* File System ID */
+
+#define LFS_ID          0x58696E75      /* ID for Xinu Local File System*/
+
+#pragma pack(2)
+struct  lfdir   {                       /* Entire directory on disk     */
+	uint32  lfd_fsysid;             /* File system ID               */
+	int16   lfd_vers;               /* File system version          */
+	int16   lfd_subvers;            /* File system subversion       */
+	uint32  lfd_allzeros;           /* All 0 bits                   */
+	uint32  lfd_allones;            /* All 1 bits                   */
+	dbid32  lfd_dfree;              /* List of free d-blocks on disk*/
+	ibid32  lfd_ifree;              /* List of free i-blocks on disk*/
+	int32   lfd_nfiles;             /* Current number of files      */
+	struct  ldentry lfd_files[LF_NUM_DIR_ENT]; /* Set of files      */
+	uint32  lfd_revid;              /* fsysid in reverse byte order */
+};
+#pragma pack()
+
+#endif
 
 /* Global data used by local file system */
 

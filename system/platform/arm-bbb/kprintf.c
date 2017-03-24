@@ -8,15 +8,14 @@
  *------------------------------------------------------------------------
  */
 syscall kputc(
-	  byte	c			/* character to write		*/
-	)
+	      byte	c,			/* character to write */
+	      struct dentry *devptr
+	      )
 {
-	struct	dentry		*devptr;
 	struct	uart_csreg	*csrptr;
 
 	/* Get CSR address of the console */
 
-	devptr = (struct dentry *) &devtab[CONSOLE];
 	csrptr = (struct uart_csreg *) devptr->dvcsr;
 
 	/* wait for UART transmit queue to empty */
@@ -53,14 +52,12 @@ syscall kputc(
  * @param *devptr pointer to device on which to write character
  * @return character read on success, SYSERR on failure
  */
-syscall kgetc(void)
+syscall kgetc(struct dentry *devptr)
 {
     int irmask;
     volatile struct uart_csreg *regptr;
     byte c;
-	struct	dentry	*devptr;
 
-	devptr = (struct dentry *) &devtab[CONSOLE];
     regptr = (struct uart_csreg *)devptr->dvcsr;
 
     irmask = regptr->ier;       /* Save UART interrupt state.   */
@@ -76,19 +73,19 @@ syscall kgetc(void)
     return c;
 }
 
-extern	void	_doprnt(char *, va_list, int (*)(int), int);
+extern	void	_doprnt(const char *, va_list, int (*)(int,void*), void*);
 
 /**
  * kernel printf: formatted, unbuffered output to CONSOLE
  * @param *fmt pointer to string being printed
  * @return OK on success
  */
-syscall kprintf(char *fmt, ...)
+syscall kprintf(const char *fmt, ...)
 {
     va_list ap;
 
     va_start(ap, fmt);
-    _doprnt(fmt, ap, (int (*)(int))kputc, (int)&devtab[CONSOLE]);
+    _doprnt(fmt, ap, (int (*)(int,void*))kputc, &devtab[CONSOLE]);
     va_end(ap);
     return OK;
 }

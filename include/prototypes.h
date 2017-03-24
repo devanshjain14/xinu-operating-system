@@ -644,12 +644,8 @@ extern	interrupt ethhandler(uint32);
 #endif /* ARM_QEMU */
 
 #ifdef ARM_BBB
-/* Prototypes of I/O functions used throughout the kernel */
-syscall       kprintf(char *fmt, ...);
-syscall       kputc(byte);
-syscall       kgetc(void);
-
 /* in file am335x_eth_init.c */
+extern  void    am335x_init();
 extern	int32	am335x_eth_init(struct ethcblk *);
 
 extern	void	trap(int32);
@@ -662,7 +658,7 @@ extern	void	ttyhandler(uint32);
 
 #endif /* ARM_BBB */
 
-#ifdef X86_GALILEO
+#if defined(X86_QEMU) || defined(X86_GALILEO)
 
 /* in file clkdisp.S */
 
@@ -701,13 +697,35 @@ extern	interrupt	sdmcdispatch(void);
 /* in file ttydispatch.c */
 extern	interrupt	ttydispatch(void);
 
-/* in file evec.c */
-extern	void	trap(int32, long *);
-
 /* in file ttyhandler.c */
 extern	void	ttyhandler(void);
 
 /* in file ethhandler.c */
 extern 	interrupt	ethhandler();
+
+#endif
+
+#ifdef X86_GALILEO
+/* in file evec.c */
+extern	void	trap(int32, long *);
+#endif
+
+#ifdef X86_QEMU
+/* in file evec.c */
+extern	void	trap(int inum);
+
+/* in file ethcontrol.c */
+extern  devcall ethcontrol(struct dentry *, int32, int32, int32);
+extern  void    ethIrqDisable(struct ethcblk *);
+extern  void    ethIrqEnable(struct ethcblk *);
+extern  void    ethdispatch(void);
+
+/* in file lfscheck.c */
+extern  status  lfscheck(struct lfdir *);
+
+/* in file 82545EMInit.c */
+extern  status  _82545EMInit(struct ethcblk *);
+extern  status  _82545EM_read_phy_reg(struct ethcblk *, uint32, uint16 *);
+extern  status  _82545EM_write_phy_reg(struct ethcblk *, uint32, uint16);
 
 #endif

@@ -1,6 +1,7 @@
 /* xinu.h - include all system header files */
 #ifndef _XINU_H
 #define _XINU_H
+#include <stdarg.h>
 #include <kernel.h>
 #include <stddef.h>
 #include <conf.h>
@@ -38,28 +39,47 @@
 #include <stdio.h>
 #include <string.h>
 
+#if defined(ARM_QEMU) || defined(ARM_BBB)
+
+#include <armv7a.h>
+
+#endif
+
 #ifdef ARM_QEMU
 
-#include <platform/arm-qemu/armv7a.h>
+#include <platform.h>
+struct platform platform;
 
 #endif
 
 #ifdef ARM_BBB
 
-#include <platform/arm-bbb/am335x_control.h>
-#include <platform/arm-bbb/am335x_eth.h>
-#include <platform/arm-bbb/armv7a.h>
+#include <am335x_control.h>
+#include <am335x_eth.h>
+
+#endif
+
+#if defined(X86_QEMU) || defined(X86_GALILEO)
+
+#include <pci.h>
+#include <multiboot.h>
+
+#endif 
+
+#ifdef X86_QEMU
+
+#include <i386.h>
+#include <io.h>
+#include <e1000e.h>
 
 #endif
 
 #ifdef X86_GALILEO
 
-#include <platform/x86-galileo/pci.h>
-#include <platform/x86-galileo/quark_eth.h>
-#include <platform/x86-galileo/quark_pdat.h>
-#include <platform/x86-galileo/quark_irq.h>
-#include <platform/x86-galileo/multiboot.h>
+#include <quark_eth.h>
+#include <quark_pdat.h>
+#include <quark_irq.h>
 
-#endif 
+#endif
 
 #endif
