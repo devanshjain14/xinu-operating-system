@@ -631,8 +631,6 @@ devcall loopbackGetc(struct dentry *);
 devcall loopbackPutc(struct dentry *, char);
 devcall loopbackControl(struct dentry *, int, long, long);
 
-syscall kputc(uchar c, struct dentry *devptr);
-
 extern	void	trap(int32);
 
 /* in file ttyhandler.c */

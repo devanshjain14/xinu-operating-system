@@ -55,6 +55,13 @@ void	nulluser()
 
 	sysinit();
 
+	/* Reset the console */
+	
+#if defined(X86_QEMU) || defined(X86_GALILEO)
+	kprintf(CONSOLE_RESET);
+#endif
+	kprintf("\n%s\n\n", VERSION);
+	
 	/* Output Xinu memory layout */
 	free_mem = 0;
 	for (memptr = memlist.mnext; memptr != NULL;
@@ -167,13 +174,6 @@ static	void	sysinit()
 
 	platinit();
 	
-	/* Reset the console */
-
-#if defined(X86_QEMU) || defined(X86_GALILEO)
-	kprintf(CONSOLE_RESET);
-#endif
-	kprintf("\n%s\n\n", VERSION);
-
 	/* Initialize the interrupt vectors.
 	   Note: this is done elsewhere in Embedded Xinu (the QEMU version)
 	*/
