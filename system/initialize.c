@@ -87,11 +87,12 @@ void	nulluser()
 
 	enable();
 
-#if defined(X86_QEMU) || defined(X86_GALILEO)
+#ifdef ETHER0
 	/* Initialize the network stack and start processes */
-	
+
 	net_init();
 #endif
+
 	/* Create a process to finish startup and start main */
 
 	resume(create((void *)startup, INITSTK, INITPRIO,
@@ -109,8 +110,9 @@ void	nulluser()
 
 /*------------------------------------------------------------------------
  *
- * startup  -  Finish startup takss that cannot be run from the Null
+ * startup  -  Finish startup tasks that cannot be run from the Null
  *		  process and then create and resume the main process
+ * 
  *
  *------------------------------------------------------------------------
  */
@@ -124,6 +126,8 @@ local process	startup(void)
 	/* Use DHCP to obtain an IP address and format it */
 	kprintf("Attempting to get an IP address via DHCP...(please wait)\n");
 	
+  NetData.ipvalid = FALSE;
+
 	ipaddr = getlocalip();
 	if ((int32)ipaddr == SYSERR) {
 		kprintf("Cannot DHCP an IP address, performing static config\n");
@@ -132,7 +136,7 @@ local process	startup(void)
 		char x_router[] = "192.168.1.255";
 		
 		/* Start the network */
-		netstart(x_ipaddr,x_router);
+		net_static(x_ipaddr,x_router);
 		nsaddr = 0x800a0c10;
 	} else {
 		/* Print the IP in dotted decimal and hex */

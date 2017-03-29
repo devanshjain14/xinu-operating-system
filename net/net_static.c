@@ -1,23 +1,23 @@
-/* netstart.c - netstart */
+/* net_static.c - net_static */
 
 #include <xinu.h>
 
 /*------------------------------------------------------------------------
- * netstart  -  Initialize network and run DHCP to get an IP address
+ * net_static  -  Initialize static network config
  *------------------------------------------------------------------------
  */
 
-void	netstart (char *bbb_ipaddr, char *bbb_router) {
+void	net_static (char *x_ipaddr, char *x_router) {
   uint32 ipaddr;			/* IP address			*/
   uint32 router;			/* Router			*/
   uint32 mask;			        /* Subnet Mask			*/
   
   /* Initialize the network stack */
   
-  kprintf("...initializing network stack\n");
-  net_init();
+  //kprintf("...initializing network stack\n");
+  //net_init();
   
-  dot2ip(bbb_ipaddr,&ipaddr);
+  dot2ip(x_ipaddr,&ipaddr);
   NetData.ipucast = ipaddr;
   
   kprintf("\nIP address is %d.%d.%d.%d   (0x%08x)\n\r",
@@ -26,7 +26,7 @@ void	netstart (char *bbb_ipaddr, char *bbb_router) {
   
   dot2ip("255.255.255.0",&mask);
   NetData.ipmask = 0xFFFFFF00;
-  dot2ip(bbb_router,&router);
+  dot2ip(x_router,&router);
   NetData.iprouter = router;
   NetData.ipprefix = NetData.ipucast & NetData.ipmask;
   NetData.ipbcast = NetData.ipprefix | ~NetData.ipmask;

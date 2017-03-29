@@ -195,9 +195,9 @@ extern	process	rawin(void);
 extern	void	eth_hton(struct netpacket *);
 extern	void	eth_ntoh(struct netpacket *);
 
-/* in file netstart.c */
+/* in file net_static.c */
 
-extern	void	netstart(char *,char *);
+extern	void	net_static(char *,char *);
 
 /* in file kill.c */
 
