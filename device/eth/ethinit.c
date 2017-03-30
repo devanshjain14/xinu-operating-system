@@ -125,8 +125,14 @@ int32	eth_phy_reset (
 	phyreg |= ETH_PHY_CTLREG_RESET;
 	eth_phy_write(mdio, ETH_PHY_CTLREG, phyadr, phyreg);
 
-	/* Check if Reset operation is complete */
+	/* Restart auto negotiation (needed for Beaglebone White) */
+	
+	phyreg ^= ETH_PHY_CTLREG_RESET;
+	phyreg |= ETH_PHY_CTLREG_AUTO;
+	eth_phy_write(mdio, ETH_PHY_CTLREG, phyadr, phyreg);
 
+	/* Check if Reset operation is complete */
+	
 	for(retries = 0; retries < 10; retries++) {
 		if(eth_phy_read(mdio, ETH_PHY_CTLREG, phyadr, &phyreg) == SYSERR) {
 			return SYSERR;
@@ -221,13 +227,18 @@ int32	ethinit	(
 	/* Enable MDIO	*/
 
 	csrptr->mdio->ctrl |= ETH_AM335X_MDIOCTL_EN;
+	       
+	/* Reset the PHY (if needed) */
 
-	/* Reset the PHY */
-
-	retval = eth_phy_reset(csrptr->mdio, 0);
-	if(retval == SYSERR) {
-		kprintf("Cannot reset Ethernet PHY\n");
+	if(eth_phy_read(csrptr->mdio, ETH_PHY_STATREG, 0, &phyreg) == SYSERR) {
 		return SYSERR;
+	}
+	if(!(phyreg & ETH_PHY_STATREG_LINK)) {
+		retval = eth_phy_reset(csrptr->mdio, 0);
+		if(retval == SYSERR) {
+			kprintf("Cannot reset Ethernet PHY\n");
+			return SYSERR;
+		}
 	}
 
 	retval = eth_phy_read(csrptr->mdio, ETH_PHY_CTLREG, 0, &phyreg);

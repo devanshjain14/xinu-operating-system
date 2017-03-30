@@ -78,6 +78,7 @@ struct	etherPkt {
 #define ETH_PHY_STATREG	1
 
 #define ETH_PHY_CTLREG_RESET	0x8000
+#define ETH_PHY_CTLREG_AUTO	0x0200  /* Restart auto negotiation */
 #define ETH_PHY_CTLREG_SM	0x2040	/* Speed Mask	*/
 #define ETH_PHY_10M		0x0000
 #define ETH_PHY_100M		0x2000
