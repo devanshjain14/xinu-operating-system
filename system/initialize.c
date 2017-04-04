@@ -94,7 +94,7 @@ void	nulluser()
 	net_init();
 #endif
 
-#ifdef ARM_BBB
+#ifdef GPIO
 	/* Create a heartbeat status process (LED blinker) */
 
 	resume(create((void*)heartbeat, INITSTK, INITPRIO,

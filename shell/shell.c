@@ -22,7 +22,9 @@ const	struct	cmdent	cmdtab[] = {
 	{"ps",		FALSE,	xsh_ps},
 	{"sleep",	FALSE,	xsh_sleep},
 	{"uptime",	FALSE,	xsh_uptime},
+#ifdef GPIO
 	{"led",         FALSE,  xsh_led},
+#endif
 #ifdef ETHER0
   {"arp",		FALSE,	xsh_arp},
   {"ipaddr",	FALSE,	xsh_ipaddr},

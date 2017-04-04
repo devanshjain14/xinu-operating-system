@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef GPIO
+
 /*------------------------------------------------------------------------
  * xsh_led - shell command to turn LEDs on or off
  *------------------------------------------------------------------------
@@ -68,3 +70,5 @@ shellcmd xsh_led(int nargs, char *args[])
 	}
 	return 0;
 }
+
+#endif

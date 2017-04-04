@@ -33,12 +33,15 @@ void	platinit(void)
 }
 
 void clearLED() {
+#ifdef GPIO
+
   int i;
 
   for (i=GPIO_LED_USR0; i<=GPIO_LED_USR3; i=i<<1) {
     initGPIO(i);
     gpioLEDOff(i);
   }
+#endif
 }
 
 void am335x_init(void)

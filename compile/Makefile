@@ -28,7 +28,7 @@ ifeq ($(PLATFORM),arm-qemu)
 else ifeq ($(PLATFORM),arm-bbb)
 
 	ARCH          = arm
-	PLAT_CFLAGS   = -DARM_BBB -mcpu=cortex-a8 -mno-unaligned-access -marm -O
+	PLAT_CFLAGS   = -DARM_BBB -DGPIO -mcpu=cortex-a8 -mno-unaligned-access -marm -O
 	PLAT_LOADADDR = 0x81000000
 	LDARCH        = armelf
 	INCLUDE	      = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)

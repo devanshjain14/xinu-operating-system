@@ -23,7 +23,6 @@
 #include <rdisksys.h>
 #include <lfilesys.h>
 #include <ether.h>
-#include <gpio.h>
 #include <net.h>
 #include <ip.h>
 #include <arp.h>
@@ -38,6 +37,10 @@
 #include <delay.h>
 #include <stdio.h>
 #include <string.h>
+
+#ifdef GPIO
+#include <gpio.h>
+#endif
 
 #if defined(ARM_QEMU) || defined(ARM_BBB)
 
