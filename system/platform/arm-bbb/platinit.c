@@ -2,6 +2,8 @@
 
 #include <xinu.h>
 
+void clearLED();
+
 /*------------------------------------------------------------------------
  * platinit - platform specific initialization for BeagleBone Black
  *------------------------------------------------------------------------
@@ -10,6 +12,7 @@ void	platinit(void)
 {
 	struct	uart_csreg *uptr;	/* address of UART's CSRs	*/
 
+	clearLED();
 
 	/* Initialize the Interrupt Controller */
 
@@ -27,8 +30,15 @@ void	platinit(void)
 	uptr = (struct uart_csreg *)devtab[CONSOLE].dvcsr;
 	uptr->sysc |= UART_SYSC_SOFTRESET;
 	while((uptr->syss & UART_SYSS_RESETDONE) == 0);
+}
 
+void clearLED() {
+  int i;
 
+  for (i=GPIO_LED_USR0; i<=GPIO_LED_USR3; i=i<<1) {
+    initGPIO(i);
+    gpioLEDOff(i);
+  }
 }
 
 void am335x_init(void)

@@ -12,6 +12,7 @@ extern	void	*_end;		/* End of Xinu code			*/
 
 extern	void main(void);	/* Main is the first process created	*/
 static	void sysinit(); 	/* Internal system initialization	*/
+extern	void heartbeat(); 	/* Internal hearbeat initialization	*/
 extern	void meminit(void);	/* Initializes the free memory list	*/
 local	process startup(void);	/* Process to finish startup tasks	*/
 
@@ -93,8 +94,15 @@ void	nulluser()
 	net_init();
 #endif
 
-	/* Create a process to finish startup and start main */
+#ifdef ARM_BBB
+	/* Create a heartbeat status process (LED blinker) */
 
+	resume(create((void*)heartbeat, INITSTK, INITPRIO,
+		                        "Heartbeat process", 0, NULL));
+#endif
+	
+	/* Create a process to finish startup and start main */
+	
 	resume(create((void *)startup, INITSTK, INITPRIO,
 					"Startup process", 0, NULL));
 
@@ -126,7 +134,7 @@ local process	startup(void)
 	/* Use DHCP to obtain an IP address and format it */
 	kprintf("Attempting to get an IP address via DHCP...(please wait)\n");
 	
-  NetData.ipvalid = FALSE;
+	NetData.ipvalid = FALSE;
 
 	ipaddr = getlocalip();
 	if ((int32)ipaddr == SYSERR) {
@@ -160,7 +168,6 @@ local process	startup(void)
 
 	return OK;
 }
-
 
 /*------------------------------------------------------------------------
  *

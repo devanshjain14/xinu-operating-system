@@ -19,7 +19,7 @@ shellcmd xsh_led(int nargs, char *args[])
 		printf("Description:\n");
 		printf("\tTurns a front-panel LED on or off\n");
 		printf("Options:\n");
-		printf("\tLED_name:\tdmz, wlan, power, ciscow, ciscoo\n");
+		printf("\tLED_name:\tUSR0, USR1, USR2, USR3\n");
 		printf("\tState:\t\ton, off\n");
 
 		printf("\t--help\t display this help and exit\n");
@@ -39,16 +39,14 @@ shellcmd xsh_led(int nargs, char *args[])
 
 	/* cfind led to change */
 
-	if (strncmp(args[1], "dmz", 3) == 0) {
-		led = GPIO_LED_DMZ;
-	} else if (strncmp(args[1], "wlan", 4) == 0) {
-		led = GPIO_LED_WLAN;
-	} else if (strncmp(args[1], "power", 5) == 0) {
-		led = GPIO1;
-	} else if (strncmp(args[1], "ciscow", 6) == 0) {
-		led = GPIO_LED_CISCOWHT;
-	} else if (strncmp(args[1], "ciscoo", 6) == 0) {
-		led = GPIO_LED_CISCOONG;
+	if (strncmp(args[1], "USR0", 4) == 0) {
+		led = GPIO_LED_USR0;
+	} else if (strncmp(args[1], "USR1", 4) == 0) {
+		led = GPIO_LED_USR1;
+	} else if (strncmp(args[1], "USR2", 4) == 0) {
+		led = GPIO_LED_USR2;
+	} else if (strncmp(args[1], "USR3", 4) == 0) {
+		led = GPIO_LED_USR3;
 	} else {
 		fprintf(stderr, "%s: LED name %s is invalid\n",
 			args[0], args[1]);
