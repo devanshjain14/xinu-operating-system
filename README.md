@@ -2,5 +2,5 @@
 
 # Build instructions
 
-Copy the file config/Makedefs.EXAMPLE to config/Makedefs and make appropriate changes if necessary.
+Copy the file compile/Makedefs.EXAMPLE to compile/Makedefs and make appropriate changes if necessary.  Make sure that the correct COMPILER_ROOT, LIBGCC_LOC and COMF_LFLAGS are set.
 
