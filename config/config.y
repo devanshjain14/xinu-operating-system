@@ -9,6 +9,7 @@
 #include <ctype.h>
 
 extern	char	*yytext;
+int		yylex();
 /*
    Workaround for type conflict resulting from unmatched versions of flex and
    bison (lex and yacc).  Force new-style flex output (lex.yy.c) to treat
