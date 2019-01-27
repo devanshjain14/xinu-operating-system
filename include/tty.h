@@ -55,6 +55,14 @@ struct	ttycblk	{			/* tty line control block	*/
 	char	tyostart;		/* character that starts output	*/
 	bool8	tyocrlf;		/* output CR/LF for LF ?	*/
 	char	tyifullc;		/* char to send when input full	*/
+
+  /* Statistical Counts */
+  uint cout;                  /**< Characters output                  */
+  uint cin;                   /**< Characters input                   */
+  uint lserr;                 /**< Receiver error count               */
+  uint ovrrn;                 /**< Characters overrun                 */
+  uint iirq;                  /**< Input IRQ count                    */
+  uint oirq;                  /**< Output IRQ count       
 };
 extern	struct	ttycblk	ttytab[];
 

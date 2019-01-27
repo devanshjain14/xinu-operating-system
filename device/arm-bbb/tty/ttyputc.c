@@ -17,8 +17,8 @@ devcall	ttyputc(
 
 	/* Handle output CRLF by sending CR first */
 
-        if ( ch==TY_NEWLINE && typtr->tyocrlf ) {
-                ttyputc(devptr, TY_RETURN);
+  if ( ch==TY_NEWLINE && typtr->tyocrlf ) {
+    ttyputc(devptr, TY_RETURN);
 	}
 
 	wait(typtr->tyosem);		/* Wait	for space in queue */
