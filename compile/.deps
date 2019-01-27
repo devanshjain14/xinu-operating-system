@@ -1,0 +1,2117 @@
+ascdate.o: ../system/ascdate.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+bufinit.o: ../system/bufinit.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+chprio.o: ../system/chprio.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+close.o: ../system/close.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+conf.o: ../system/conf.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+control.o: ../system/control.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+exit.o: ../system/exit.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+freebuf.o: ../system/freebuf.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+freemem.o: ../system/freemem.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getbuf.o: ../system/getbuf.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getc.o: ../system/getc.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getdev.o: ../system/getdev.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getitem.o: ../system/getitem.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getmem.o: ../system/getmem.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getpid.o: ../system/getpid.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getprio.o: ../system/getprio.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+getstk.o: ../system/getstk.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+init.o: ../system/init.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+initialize.o: ../system/initialize.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+insert.o: ../system/insert.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+insertd.o: ../system/insertd.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ioerr.o: ../system/ioerr.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ionull.o: ../system/ionull.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+kill.o: ../system/kill.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+main.o: ../system/main.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+mark.o: ../system/mark.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+mkbufpool.o: ../system/mkbufpool.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+newqueue.o: ../system/newqueue.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+open.o: ../system/open.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+panic.o: ../system/panic.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptclear.o: ../system/ptclear.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptcount.o: ../system/ptcount.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptcreate.o: ../system/ptcreate.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptdelete.o: ../system/ptdelete.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptinit.o: ../system/ptinit.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptrecv.o: ../system/ptrecv.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptreset.o: ../system/ptreset.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ptsend.o: ../system/ptsend.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+putc.o: ../system/putc.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+queue.o: ../system/queue.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+read.o: ../system/read.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+ready.o: ../system/ready.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+receive.o: ../system/receive.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+recvclr.o: ../system/recvclr.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+recvtime.o: ../system/recvtime.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+resched.o: ../system/resched.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+resume.o: ../system/resume.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+seek.o: ../system/seek.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+semcount.o: ../system/semcount.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+semcreate.o: ../system/semcreate.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+semdelete.o: ../system/semdelete.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+semreset.o: ../system/semreset.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+send.o: ../system/send.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+signal.o: ../system/signal.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+signaln.o: ../system/signaln.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+sleep.o: ../system/sleep.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+suspend.o: ../system/suspend.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+unsleep.o: ../system/unsleep.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+userret.o: ../system/userret.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+wait.o: ../system/wait.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+wakeup.o: ../system/wakeup.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+write.o: ../system/write.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xdone.o: ../system/xdone.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+yield.o: ../system/yield.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+clkhandler.o: ../system/platform/arm-qemu/clkhandler.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/platform.h
+clkinit.o: ../system/platform/arm-qemu/clkinit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/platform.h
+gettime.o: ../system/platform/arm-qemu/gettime.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+kprintf.o: ../system/platform/arm-qemu/kprintf.c ../include/stdarg.h \
+ ../include/kernel.h
+pl190.o: ../system/platform/arm-qemu/pl190.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/stdint.h
+platinit.o: ../system/platform/arm-qemu/platinit.c ../include/platform.h \
+ ../include/xinu.h ../include/stdarg.h ../include/kernel.h \
+ ../include/stddef.h ../include/conf.h ../include/process.h \
+ ../include/queue.h ../include/resched.h ../include/semaphore.h \
+ ../include/memory.h ../include/memmax.h ../include/bufpool.h \
+ ../include/clock.h ../include/mark.h ../include/ports.h \
+ ../include/platform/arm/uart.h ../include/tty.h ../include/device.h \
+ ../include/interrupt.h ../include/file.h ../include/rfilesys.h \
+ ../include/rdisksys.h ../include/lfilesys.h ../include/ether.h \
+ ../include/net.h ../include/ip.h ../include/arp.h ../include/udp.h \
+ ../include/dhcp.h ../include/icmp.h ../include/tftp.h ../include/name.h \
+ ../include/shell.h ../include/date.h ../include/prototypes.h \
+ ../include/delay.h ../include/stdio.h ../include/string.h \
+ ../include/stdint.h
+sp804.o: ../system/platform/arm-qemu/sp804.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/stdint.h
+udelay.o: ../system/platform/arm-qemu/udelay.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/platform.h
+create.o: ../system/platform/arm/create.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+evec.o: ../system/platform/arm/evec.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+meminit.o: ../system/platform/arm/meminit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+mmu.o: ../system/platform/arm/mmu.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h ../include/mmu.h
+abs.o: ../lib/abs.c
+atoi.o: ../lib/atoi.c
+atol.o: ../lib/atol.c
+bzero.o: ../lib/bzero.c
+ctype_.o: ../lib/ctype_.c ../include/ctype.h
+doprnt.o: ../lib/doprnt.c ../include/stdarg.h
+doscan.o: ../lib/doscan.c ../include/ctype.h
+fdoprnt.o: ../lib/fdoprnt.c ../include/stdarg.h
+fgetc.o: ../lib/fgetc.c
+fgets.o: ../lib/fgets.c
+fprintf.o: ../lib/fprintf.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+fputc.o: ../lib/fputc.c
+fputs.o: ../lib/fputs.c
+fscanf.o: ../lib/fscanf.c
+getchar.o: ../lib/getchar.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+labs.o: ../lib/labs.c
+memchr.o: ../lib/memchr.c
+memcmp.o: ../lib/memcmp.c
+memcpy.o: ../lib/memcpy.c
+memset.o: ../lib/memset.c
+printf.o: ../lib/printf.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+putchar.o: ../lib/putchar.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+qsort.o: ../lib/qsort.c
+rand.o: ../lib/rand.c
+sprintf.o: ../lib/sprintf.c ../include/stdarg.h
+sscanf.o: ../lib/sscanf.c
+strchr.o: ../lib/strchr.c
+strcmp.o: ../lib/strcmp.c
+strcpy.o: ../lib/strcpy.c
+strlen.o: ../lib/strlen.c
+strncat.o: ../lib/strncat.c
+strncmp.o: ../lib/strncmp.c
+strncpy.o: ../lib/strncpy.c
+strnlen.o: ../lib/strnlen.c
+strrchr.o: ../lib/strrchr.c
+strstr.o: ../lib/strstr.c
+addargs.o: ../shell/addargs.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h ../include/shprototypes.h
+lexan.o: ../shell/lexan.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+shell.o: ../shell/shell.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h ../include/shprototypes.h
+xsh_argecho.o: ../shell/xsh_argecho.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+xsh_arp.o: ../shell/xsh_arp.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_cat.o: ../shell/xsh_cat.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_clear.o: ../shell/xsh_clear.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_date.o: ../shell/xsh_date.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_devdump.o: ../shell/xsh_devdump.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+xsh_echo.o: ../shell/xsh_echo.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_exit.o: ../shell/xsh_exit.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_help.o: ../shell/xsh_help.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_ipaddr.o: ../shell/xsh_ipaddr.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_kill.o: ../shell/xsh_kill.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_led.o: ../shell/xsh_led.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_memdump.o: ../shell/xsh_memdump.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+xsh_memstat.o: ../shell/xsh_memstat.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+xsh_mmu.o: ../shell/xsh_mmu.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_ping.o: ../shell/xsh_ping.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h ../include/dns.h
+xsh_ps.o: ../shell/xsh_ps.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_sleep.o: ../shell/xsh_sleep.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+xsh_udpdump.o: ../shell/xsh_udpdump.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+xsh_udpecho.o: ../shell/xsh_udpecho.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+xsh_udpeserver.o: ../shell/xsh_udpeserver.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+xsh_uptime.o: ../shell/xsh_uptime.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+consume.o: ../apps/consume.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+produce.o: ../apps/produce.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+kgetc.o: ../device/arm-qemu/tty/kgetc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../device/arm-qemu/tty/pl011.h
+kputc.o: ../device/arm-qemu/tty/kputc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../device/arm-qemu/tty/pl011.h
+kvprintf.o: ../device/arm-qemu/tty/kvprintf.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+uartControl.o: ../device/arm-qemu/tty/uartControl.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+uartGetc.o: ../device/arm-qemu/tty/uartGetc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+uartHwInit.o: ../device/arm-qemu/tty/uartHwInit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../device/arm-qemu/tty/pl011.h
+uartHwPutc.o: ../device/arm-qemu/tty/uartHwPutc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../device/arm-qemu/tty/pl011.h
+uartHwStat.o: ../device/arm-qemu/tty/uartHwStat.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../device/arm-qemu/tty/pl011.h
+uartInit.o: ../device/arm-qemu/tty/uartInit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+uartInterrupt.o: ../device/arm-qemu/tty/uartInterrupt.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../device/arm-qemu/tty/pl011.h
+uartPutc.o: ../device/arm-qemu/tty/uartPutc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+uartRead.o: ../device/arm-qemu/tty/uartRead.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+uartStat.o: ../device/arm-qemu/tty/uartStat.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+uartWrite.o: ../device/arm-qemu/tty/uartWrite.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+mount.o: ../device/arm/nam/mount.c ../include/xinu.h ../include/stdarg.h \
+ ../include/kernel.h ../include/stddef.h ../include/conf.h \
+ ../include/process.h ../include/queue.h ../include/resched.h \
+ ../include/semaphore.h ../include/memory.h ../include/memmax.h \
+ ../include/bufpool.h ../include/clock.h ../include/mark.h \
+ ../include/ports.h ../include/platform/arm/uart.h ../include/tty.h \
+ ../include/device.h ../include/interrupt.h ../include/file.h \
+ ../include/rfilesys.h ../include/rdisksys.h ../include/lfilesys.h \
+ ../include/ether.h ../include/net.h ../include/ip.h ../include/arp.h \
+ ../include/udp.h ../include/dhcp.h ../include/icmp.h ../include/tftp.h \
+ ../include/name.h ../include/shell.h ../include/date.h \
+ ../include/prototypes.h ../include/delay.h ../include/stdio.h \
+ ../include/string.h
+naminit.o: ../device/arm/nam/naminit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+nammap.o: ../device/arm/nam/nammap.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+namopen.o: ../device/arm/nam/namopen.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+ramclose.o: ../device/arm/ram/ramclose.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+raminit.o: ../device/arm/ram/raminit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/ramdisk.h
+ramopen.o: ../device/arm/ram/ramopen.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+ramread.o: ../device/arm/ram/ramread.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/ramdisk.h
+ramwrite.o: ../device/arm/ram/ramwrite.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/ramdisk.h
+lfdballoc.o: ../device/arm/lfs/lfdballoc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfdbfree.o: ../device/arm/lfs/lfdbfree.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfflush.o: ../device/arm/lfs/lfflush.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfgetmode.o: ../device/arm/lfs/lfgetmode.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfiballoc.o: ../device/arm/lfs/lfiballoc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfibclear.o: ../device/arm/lfs/lfibclear.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfibget.o: ../device/arm/lfs/lfibget.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfibput.o: ../device/arm/lfs/lfibput.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflclose.o: ../device/arm/lfs/lflclose.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflcontrol.o: ../device/arm/lfs/lflcontrol.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflgetc.o: ../device/arm/lfs/lflgetc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflinit.o: ../device/arm/lfs/lflinit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflputc.o: ../device/arm/lfs/lflputc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflread.o: ../device/arm/lfs/lflread.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflseek.o: ../device/arm/lfs/lflseek.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lflwrite.o: ../device/arm/lfs/lflwrite.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfsckfmt.o: ../device/arm/lfs/lfsckfmt.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/ramdisk.h
+lfscreate.o: ../device/arm/lfs/lfscreate.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/ramdisk.h
+lfsetup.o: ../device/arm/lfs/lfsetup.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfsinit.o: ../device/arm/lfs/lfsinit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lfsopen.o: ../device/arm/lfs/lfsopen.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+lftruncate.o: ../device/arm/lfs/lftruncate.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h
+Doxygroup.o: ../device/arm/loopback/Doxygroup.c
+loopbackClose.o: ../device/arm/loopback/loopbackClose.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/loopback.h \
+ ../include/stdlib.h
+loopbackControl.o: ../device/arm/loopback/loopbackControl.c \
+ ../include/xinu.h ../include/stdarg.h ../include/kernel.h \
+ ../include/stddef.h ../include/conf.h ../include/process.h \
+ ../include/queue.h ../include/resched.h ../include/semaphore.h \
+ ../include/memory.h ../include/memmax.h ../include/bufpool.h \
+ ../include/clock.h ../include/mark.h ../include/ports.h \
+ ../include/platform/arm/uart.h ../include/tty.h ../include/device.h \
+ ../include/interrupt.h ../include/file.h ../include/rfilesys.h \
+ ../include/rdisksys.h ../include/lfilesys.h ../include/ether.h \
+ ../include/net.h ../include/ip.h ../include/arp.h ../include/udp.h \
+ ../include/dhcp.h ../include/icmp.h ../include/tftp.h ../include/name.h \
+ ../include/shell.h ../include/date.h ../include/prototypes.h \
+ ../include/delay.h ../include/stdio.h ../include/string.h \
+ ../include/loopback.h
+loopbackGetc.o: ../device/arm/loopback/loopbackGetc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/loopback.h
+loopbackInit.o: ../device/arm/loopback/loopbackInit.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/loopback.h \
+ ../include/stdlib.h
+loopbackOpen.o: ../device/arm/loopback/loopbackOpen.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/loopback.h \
+ ../include/stdlib.h
+loopbackPutc.o: ../device/arm/loopback/loopbackPutc.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/loopback.h
+loopbackRead.o: ../device/arm/loopback/loopbackRead.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/loopback.h
+loopbackWrite.o: ../device/arm/loopback/loopbackWrite.c ../include/xinu.h \
+ ../include/stdarg.h ../include/kernel.h ../include/stddef.h \
+ ../include/conf.h ../include/process.h ../include/queue.h \
+ ../include/resched.h ../include/semaphore.h ../include/memory.h \
+ ../include/memmax.h ../include/bufpool.h ../include/clock.h \
+ ../include/mark.h ../include/ports.h ../include/platform/arm/uart.h \
+ ../include/tty.h ../include/device.h ../include/interrupt.h \
+ ../include/file.h ../include/rfilesys.h ../include/rdisksys.h \
+ ../include/lfilesys.h ../include/ether.h ../include/net.h \
+ ../include/ip.h ../include/arp.h ../include/udp.h ../include/dhcp.h \
+ ../include/icmp.h ../include/tftp.h ../include/name.h ../include/shell.h \
+ ../include/date.h ../include/prototypes.h ../include/delay.h \
+ ../include/stdio.h ../include/string.h ../include/loopback.h
+ctxsw.o: ../system/platform/arm-qemu/ctxsw.S
+irq_handler.o: ../system/platform/arm-qemu/irq_handler.S \
+ ../include/platform/arm/armv7a.h ../include/memmax.h
+memory_barrier.o: ../system/platform/arm-qemu/memory_barrier.S
+page_fault.o: ../system/platform/arm-qemu/page_fault.S \
+ ../include/platform/arm/armv7a.h ../include/memmax.h
+start.o: ../system/platform/arm-qemu/start.S \
+ ../include/platform/arm/armv7a.h ../include/memmax.h
+intr.o: ../system/platform/arm/intr.S ../include/platform/arm/armv7a.h \
+ ../include/memmax.h

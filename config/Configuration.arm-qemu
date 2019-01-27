@@ -24,7 +24,7 @@ null:
 		-r ionull	-g ionull	-p ionull
 		-w ionull	-s ioerr
 
-/* type of a tty device */
+/* type of a tty device (PL011 uart) */
 tty:
 	on uart
 		-i ttyinit      -o ionull       -c ionull
@@ -71,22 +71,13 @@ loopback:
 		-r loopbackRead	-g loopbackGetc -p loopbackPutc
 		-w loopbackWrite -n loopbackControl
 
-/* physical uart (PL011) device */
-uart:
-	on HARDWARE
-		-i uartInit	-o ionull	-c ionull
-		-r uartRead	-g uartGetc	-p uartPutc
-		-w uartWrite	-n uartControl
-		-intr uartInterrupt
-
-
 %%
 
 /* Actual device declarations that each give the name of a device that	*/
 /*   will be present in the system					*/
 
    /* Define the console device to be a tty and specify CSR*/
-   CONSOLE is tty  on uart  csr 0x0 -irq 72
+   CONSOLE is tty  on uart  csr 0x101F1000 -irq 12
 
    /* Define a null device */
    NULLDEV is null on nothing
@@ -110,8 +101,6 @@ uart:
    LFILE4 is lfl on lfs
    LFILE5 is lfl on lfs
 	
-   SERIAL0   is uart     on HARDWARE csr 0x101F1000 irq 12
-
    /* Loopback device  */
    LOOP0     is loopback on LOOPBACK
 	

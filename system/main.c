@@ -5,11 +5,7 @@
 process	main(void)
 {
 
-#ifdef ARM_QEMU
-	int cdev = SERIAL0;
-#else
 	int cdev = CONSOLE;
-#endif
 	
 	/* Run the Xinu shell */
 

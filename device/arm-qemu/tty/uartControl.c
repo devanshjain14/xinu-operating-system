@@ -21,7 +21,7 @@
  *      SYSERR if control function not recognized; otherwise a
  *      control-function-dependent value.
  */
-devcall uartControl(struct dentry *devptr, int func, long arg1, long arg2)
+devcall ttycontrol(struct dentry *devptr, int32 func, int32 arg1, int32 arg2)
 {
     struct uart *uartptr;
     char old;

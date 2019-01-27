@@ -24,7 +24,7 @@ struct uart uarttab[NUART];
  *
  * @return OK on success; SYSERR on failure.
  */
-devcall uartInit(struct dentry *devptr)
+devcall ttyinit(struct dentry *devptr)
 {
     /* Initialize the entry for this UART in Xinu's UART table.  */
 

@@ -25,7 +25,7 @@
  *      mode.  Returns SYSERR on other error (currently, only if uartInit() has
  *      not yet been called).
  */
-devcall uartRead(struct dentry *devptr, void *buf, uint len)
+devcall ttyread(struct dentry *devptr, char *buf, int32 len)
 {
     intmask im;
     struct uart *uartptr;
@@ -69,7 +69,7 @@ devcall uartRead(struct dentry *devptr, void *buf, uint len)
         /* If the UART is in echo mode, echo the byte back to the UART.  */
         if (uartptr->iflags & UART_IFLAG_ECHO)
         {
-            uartPutc(uartptr->dev, c);
+            ttyputc(uartptr->dev, c);
         }
 	if((c == TY_NEWLINE) || (c == TY_RETURN))
 		break;

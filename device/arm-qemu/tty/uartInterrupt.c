@@ -12,7 +12,7 @@
  *
  * Handle an interrupt request from a PL011 UART.
  */
-interrupt uartInterrupt(void)
+interrupt ttyhandler(uint32 xnum)
 {
     uint u;
 

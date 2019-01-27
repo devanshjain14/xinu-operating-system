@@ -54,16 +54,9 @@ pid32	create(
 	prptr->prhasmsg = FALSE;
 
 	/* set up initial device descriptors for the shell		*/
-#ifdef ARM_BBB
 	prptr->prdesc[0] = CONSOLE;	/* stdin  is CONSOLE device	*/
 	prptr->prdesc[1] = CONSOLE;	/* stdout is CONSOLE device	*/
 	prptr->prdesc[2] = CONSOLE;	/* stderr is CONSOLE device	*/
-#endif
-#ifdef ARM_QEMU
-	prptr->prdesc[0] = SERIAL0;	/* stdin  is SERIAL0 device	*/
-	prptr->prdesc[1] = SERIAL0;	/* stdout is SERIAL0 device	*/
-	prptr->prdesc[2] = SERIAL0;	/* stderr is SERIAL0 device	*/
-#endif
 
 	/* Initialize stack as if the process was called		*/
 

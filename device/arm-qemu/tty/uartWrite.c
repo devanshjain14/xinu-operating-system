@@ -31,7 +31,7 @@
  *      non-blocking mode.  Returns ::SYSERR on other error (currently, only if
  *      uartInit() has not yet been called).
  */
-devcall uartWrite(struct dentry *devptr, const void *buf, uint len)
+devcall ttywrite(struct dentry *devptr, char *buf, int32 len)
 {
     intmask im;
     struct uart *uartptr;

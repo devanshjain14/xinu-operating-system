@@ -1,5 +1,5 @@
 /**
- * @file uartGetc.c
+ * @file uartPutc.c
  */
 /* Embedded Xinu, Copyright (C) 2009, 2013.  All rights reserved. */
 #include <xinu.h>
@@ -10,25 +10,25 @@
 /**
  * @ingroup uartgeneric
  *
- * Read a single character from a UART.
+ * Write a single character to a UART.
  *
  * @param devptr
  *      Pointer to the device table entry for a UART.
+ * @param ch
+ *      The character to write.
  *
  * @return
- *      On success, returns the character read as an <code>unsigned char</code>
- *      cast to an <code>int</code>.  On read error, invalid device, or end-of
- *      file, returns SYSERR.
+ *      On success, returns the character written as an <code>unsigned
+ *      char</code> cast to an @c int.  On failure, returns SYSERR.
  */
-devcall uartGetc(struct dentry *devptr)
+devcall ttyputc(struct dentry *devptr, char ch)
 {
-    uchar ch;
     int retval;
 
-    retval = uartRead(devptr, &ch, 1);
+    retval = ttywrite(devptr, &ch, 1);
     if (retval == 1)
     {
-        return ch;
+        return (uchar)ch;
     }
     else
     {

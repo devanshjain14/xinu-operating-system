@@ -16,6 +16,8 @@ ifndef PLATFORM
 $(error PLATFORM is not set. Edit your Makedefs file and add 'PLATFORM=arm-qemu'or 'PLATFORM=arm-bbb')
 endif
 
+ARCH = echo ${PLATFORM} | awk -F '-' '{print $1}'
+
 ifeq ($(PLATFORM),arm-qemu)
 
 	ARCH          = arm
@@ -80,22 +82,20 @@ REBUILDFLAGS	=	-s $(TOPDIR)/system  debug.c 	\
 			-s $(TOPDIR)/apps			\
 
 ifeq ($(PLATFORM),arm-qemu)
-REBUILDFLAGS 	+=	-s $(TOPDIR)/device/tty			\
-			-s $(TOPDIR)/device/nam			\
-			-s $(TOPDIR)/device/ram			\
-			-s $(TOPDIR)/device/lfs			\
-			-s $(TOPDIR)/device/uart		\
-			-s $(TOPDIR)/device/uart-pl011		\
-			-s $(TOPDIR)/device/loopback
+REBUILDFLAGS 	+=	-s $(TOPDIR)/device/$(PLATFORM)/tty		\
+			-s $(TOPDIR)/device/$(ARCH)/nam			\
+			-s $(TOPDIR)/device/$(ARCH)/ram			\
+			-s $(TOPDIR)/device/$(ARCH)/lfs			\
+			-s $(TOPDIR)/device/$(ARCH)/loopback
 
 else ifeq ($(PLATFORM),arm-bbb)
-REBUILDFLAGS    +=	-s $(TOPDIR)/device/tty			\
-			-s $(TOPDIR)/device/nam			\
-			-s $(TOPDIR)/device/eth			\
-			-s $(TOPDIR)/device/rds			\
-			-s $(TOPDIR)/device/ram			\
-			-s $(TOPDIR)/device/lfs			\
-			-s $(TOPDIR)/device/rfs			\
+REBUILDFLAGS    +=	-s $(TOPDIR)/device/$(PLATFORM)/tty		\
+			-s $(TOPDIR)/device/$(ARCH)/nam			\
+			-s $(TOPDIR)/device/$(PLATFORM)/eth		\
+			-s $(TOPDIR)/device/$(ARCH)/rds			\
+			-s $(TOPDIR)/device/$(ARCH)/ram			\
+			-s $(TOPDIR)/device/$(ARCH)/lfs			\
+			-s $(TOPDIR)/device/$(ARCH)/rfs			\
 			-s $(TOPDIR)/net  'arp_dump*'		\
 				'dhcp_dump*'  pxe.c		
 
