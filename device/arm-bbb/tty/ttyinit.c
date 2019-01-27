@@ -46,22 +46,18 @@ devcall	ttyinit(
 	typtr->tyostart = TY_STRTCH;		/* Start char is ^Q	*/
 	typtr->tyocrlf = TRUE;			/* Send CRLF for NEWLINE*/
 	typtr->tyifullc = TY_FULLCH;		/* Send ^G when buffer	*/
-						/*   is full		*/
+                                  /*   is full		*/
 
 	/* Initialize the UART */
 
 	uptr = (struct uart_csreg *)devptr->dvcsr;
 
-	/* Set baud rate */
-	uptr->lcr = UART_LCR_DLAB;
-	uptr->dlm = UART_DLM;
-	uptr->dll = UART_DLL;
+  if ((uartinit(uptr)) == SYSERR) {
+    printf("uartinit failed\n");
+    return (SYSERR);
+  }
 
-	uptr->lcr = UART_LCR_8N1;	/* 8 bit char, No Parity, 1 Stop*/
-	uptr->fcr = 0x00;		/* Disable FIFO for now		*/
-
-	/* Register the interrupt dispatcher for the tty device */
-
+    	/* Register the interrupt dispatcher for the tty device */
 #ifdef ARM_BBB
 	set_evec( devptr->dvirq, (uint32)devptr->dvintr );
 #endif /* ARM_BBB */
@@ -69,18 +65,7 @@ devcall	ttyinit(
 	interruptVector[devptr->dvirq] = devptr->dvintr;
 #endif /* ARM_QEMU */
 
-	/* Enable interrupts on the device: reset the transmit and	*/
-	/*   receive FIFOS, and set the interrupt trigger level		*/
-
-	uptr->fcr = UART_FCR_EFIFO | UART_FCR_RRESET |
-			UART_FCR_TRESET | UART_FCR_TRIG2;
-
-	/* UART must be in 16x mode (TI AM335X specific) */
-
-	uptr->mdr1 = UART_MDR1_16X;
-
-	/* Start the device */
-
+  /* Start the device */
 	ttykickout(uptr);
 	return OK;
 }

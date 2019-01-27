@@ -23,7 +23,7 @@
  */
 devcall ttycontrol(struct dentry *devptr, int32 func, int32 arg1, int32 arg2)
 {
-    struct uart *uartptr;
+    struct uart_csreg *uartptr;
     char old;
 
     uartptr = &uarttab[devptr->dvminor];

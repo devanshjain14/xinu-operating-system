@@ -17,7 +17,7 @@
  */
 void uartStat(ushort uartnum)
 {
-    struct uart *uartptr = &uarttab[uartnum];
+    struct uart_csreg *uartptr = &uarttab[uartnum];
 
     if (NULL == uartptr->dev)
     {

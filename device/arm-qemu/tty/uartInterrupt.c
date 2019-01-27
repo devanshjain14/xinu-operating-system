@@ -16,11 +16,6 @@ interrupt ttyhandler(uint32 xnum)
 {
     uint u;
 
-    /* Set resdefer to prevent other threads from being scheduled before this
-     * interrupt handler finishes.  This prevents this interrupt handler from
-     * being executed re-entrantly.  */
-    //extern int resdefer;
-    //resdefer = 1;
     resched_cntl(DEFER_START);
 
     /* Check for interrupts on each UART.  Note: this assumes all the UARTs in
@@ -30,7 +25,7 @@ interrupt ttyhandler(uint32 xnum)
         uint mis, count;
         uchar c;
         volatile struct pl011_uart_csreg *regptr;
-        struct uart *uartptr;
+        struct uart_csreg *uartptr;
 
         /* Get a pointer to the UART structure and a pointer to the UART's
          * hardware registers.  */
@@ -140,16 +135,5 @@ interrupt ttyhandler(uint32 xnum)
         }
     }
 
-    
-    /* Now that the UART interrupt handler is finished, we can safely wake up
-     * any threads that were signaled.  */
-    /* from exinu.  Xinu has a function to enable/disable deferral
-
-    if (--resdefer > 0)
-    {
-        resdefer = 0;
-        resched();
-    }
-    */
     resched_cntl(DEFER_STOP);
 }

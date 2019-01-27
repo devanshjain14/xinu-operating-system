@@ -28,7 +28,7 @@
 devcall ttyread(struct dentry *devptr, char *buf, int32 len)
 {
     intmask im;
-    struct uart *uartptr;
+    struct uart_csreg *uartptr;
     uint count;
     uchar c;
 

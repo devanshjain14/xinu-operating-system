@@ -11,7 +11,7 @@
  * Global table of UART devices that are available in the current Embedded Xinu
  * configuration.
  */
-struct uart uarttab[NUART];
+struct uart_csreg uarttab[NUART];
 
 /**
  * @ingroup uartgeneric
@@ -28,7 +28,7 @@ devcall ttyinit(struct dentry *devptr)
 {
     /* Initialize the entry for this UART in Xinu's UART table.  */
 
-    struct uart *uartptr = &uarttab[devptr->dvminor];
+    struct uart_csreg *uartptr = &uarttab[devptr->dvminor];
 
     /* Initialize statistical counts. */
     uartptr->cout = 0;

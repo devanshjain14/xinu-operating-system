@@ -40,44 +40,45 @@ void ttyhandler(uint32 xnum) {
         /* Decode the interrupt cause */
 
 	iir &= UART_IIR_IDMASK;		/* Mask off the interrupt ID */
-        switch (iir) {
+  switch (iir) {
 
 	    /* Receiver line status interrupt (error) */
 
 	    case UART_IIR_RLSI:
-		lsr = csrptr->lsr;
-		if(lsr & UART_LSR_BI) { /* Break Interrupt */
-			lsr = csrptr->buffer; /* Read the RHR register to acknowledge */
-		}
-		return;
+        lsr = csrptr->lsr;
+        if(lsr & UART_LSR_BI) { /* Break Interrupt */
+          lsr = csrptr->buffer; /* Read the RHR register to acknowledge */
+        }
+        return;
 
 	    /* Receiver data available or timed out */
 
 	    case UART_IIR_RDA:
 	    case UART_IIR_RTO:
 
-		resched_cntl(DEFER_START);
+        resched_cntl(DEFER_START);
 
-		/* While chars avail. in UART buffer, call ttyhandle_in	*/
+        /* While chars avail. in UART buffer, call ttyhandle_in	*/
 
-		while ( (csrptr->lsr & UART_LSR_DR) != 0) {
-			ttyhandle_in(typtr, csrptr);
-                }
+        while ( (csrptr->lsr & UART_LSR_DR) != 0) {
+          ttyhandle_in(typtr, csrptr);
+        }
 
-		resched_cntl(DEFER_STOP);
+        resched_cntl(DEFER_STOP);
 
-		return;
+        return;
 
-            /* Transmitter output FIFO is empty (i.e., ready for more)	*/
+        /* Transmitter output FIFO is empty (i.e., ready for more)	*/
 
 	    case UART_IIR_THRE:
 
-		ttyhandle_out(typtr, csrptr);
-		return;
+        ttyhandle_out(typtr, csrptr);
+        return;
 
-	    /* Modem status change (simply ignore) */
+      /* Modem status change (simply ignore) */
 
 	    case UART_IIR_MSC:
-		return;
-	    }
+        
+        return;
+        }
 }

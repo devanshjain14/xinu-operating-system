@@ -23,7 +23,7 @@
  */
 syscall kputc(uchar c, struct dentry *devptr)
 {
-    struct uart *uartptr;
+    struct uart_csreg *uartptr;
     volatile struct pl011_uart_csreg *regptr;
     uint uart_im;
 

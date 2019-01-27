@@ -34,7 +34,7 @@
 devcall ttywrite(struct dentry *devptr, char *buf, int32 len)
 {
     intmask im;
-    struct uart *uartptr;
+    struct uart_csreg *uartptr;
     uint count;
 
     /* Disable interrupts and get a pointer to the UART structure and a pointer

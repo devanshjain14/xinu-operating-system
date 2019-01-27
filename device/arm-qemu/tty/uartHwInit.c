@@ -6,7 +6,7 @@
 #include <uart.h>
 #include <interrupt.h>
 #include "pl011.h"
-struct uart uarttab[NUART];
+struct uart_csreg uarttab[NUART];
 #ifdef _XINU_PLATFORM_ARM_RPI_
 
 /* Offset of UART registers from the starti of the GPIO registers. */

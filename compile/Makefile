@@ -196,6 +196,8 @@ $(CONFPGM): $(CONFL) $(CONFY)
 	@echo making the config program
 	@make -C $(TOPDIR)/config clean all install
 
+config: configure
+
 configure:
 	@echo forcing a rebuild of conf.h and conf.c
 	@make newversion

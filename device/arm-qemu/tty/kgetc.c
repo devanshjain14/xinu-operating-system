@@ -21,7 +21,7 @@
 syscall kgetc(struct dentry *devptr)
 {
     volatile struct pl011_uart_csreg *regptr;
-    struct uart *uartptr;
+    struct uart_csreg *uartptr;
     uint uart_im;
     uchar c;
 
