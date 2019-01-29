@@ -2,6 +2,8 @@
 
 #include <xinu.h>
 
+int32 uartinit(struct	uart_csreg *uptr);
+
 struct	ttycblk	ttytab[Ntty];
 
 /*------------------------------------------------------------------------
@@ -35,6 +37,7 @@ devcall	ttyinit(
 	typtr->tyicrlf = TRUE;			/* Map CR to NEWLINE	*/
 	typtr->tyierase = TRUE;			/* Do erasing backspace	*/
 	typtr->tyierasec = TY_BACKSP;		/* Erase char is ^H	*/
+	typtr->tyierasec2 = TY_BACKSP2;		/* Alt erase char is bkspc	*/
 	typtr->tyeof = TRUE;			/* Honor eof on input	*/
 	typtr->tyeofch = TY_EOFCH;		/* End-of-file character*/
 	typtr->tyikill = TRUE;			/* Allow line kill	*/

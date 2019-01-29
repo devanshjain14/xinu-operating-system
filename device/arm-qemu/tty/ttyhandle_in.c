@@ -108,9 +108,10 @@ void	ttyhandle_in (
 			return;
 		}
 
-		/* Erase (backspace) character */
+		/* Erase (backspace) characters */
 
-		if ( (ch == typtr->tyierasec) && typtr->tyierase) {
+		if ( ((ch == typtr->tyierasec) || (ch == typtr->tyierasec2)) 
+         && typtr->tyierase ) {
 			if (typtr->tyicursor > 0) {
 				typtr->tyicursor--;
 				erase1(typtr, csrptr);

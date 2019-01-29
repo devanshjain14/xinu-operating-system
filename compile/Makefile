@@ -226,7 +226,7 @@ qemu: xinu
 	export QEMU_AUDIO_DRV=wav; export QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav; qemu-system-arm -M versatilepb -m 256M -nographic -cpu arm1176 -kernel xinu.boot
 
 qemu-gdb: xinu
-		export QEMU_AUDIO_DRV=wav; export QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav;qemu-system-arm -M versatilepb -m 256M -nographic -cpu arm1176 -kernel xinu.boot -S -gdb tcp::${GPORT}
+	export QEMU_AUDIO_DRV=wav; export QEMU_WAV_PATH=$(TOPDIR)/compile/.wav.wav; qemu-system-arm -M versatilepb -m 256M -nographic -cpu arm1176 -kernel xinu.boot -S -gdb tcp::${GPORT}
 #--------------------------------------------------------------------------------
 # Locations of source directories and exceptions (.c and .[sS] files to exclude)
 #--------------------------------------------------------------------------------
