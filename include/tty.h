@@ -62,7 +62,7 @@ struct	ttycblk	{			/* tty line control block	*/
   uint lserr;                 /**< Receiver error count               */
   uint ovrrn;                 /**< Characters overrun                 */
   uint iirq;                  /**< Input IRQ count                    */
-  uint oirq;                  /**< Output IRQ count       
+  uint oirq;                  /**< Output IRQ count                   */
 };
 extern	struct	ttycblk	ttytab[];
 

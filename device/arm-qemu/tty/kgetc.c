@@ -4,7 +4,6 @@
 /* Embedded Xinu, Copyright (C) 2009, 2013.  All rights reserved. */
 #include <xinu.h>
 #include <uart.h>
-#include "pl011.h"
 /**
  * @ingroup uarthardware
  *
@@ -20,13 +19,13 @@
  */
 syscall kgetc(struct dentry *devptr)
 {
-    volatile struct pl011_uart_csreg *regptr;
-    struct uart_csreg *uartptr;
-    uint uart_im;
-    uchar c;
+  struct	ttycblk	*typtr;
+  volatile struct uart_csreg *regptr;
+  uint uart_im;
+  uchar c;
 
     /* Get pointers to the UART and to its registers.  */
-    uartptr = &uarttab[devptr->dvminor];
+    typtr = &ttytab[devptr->dvminor];
     regptr = devptr->dvcsr;
 
     /* Save the UART's interrupt state and disable the UART's interrupts.  Note:
@@ -47,7 +46,7 @@ syscall kgetc(struct dentry *devptr)
     c = regptr->dr;
 
     /* Tally one character received.  */
-    uartptr->cin++;
+    typtr->cin++;
 
     /* Restore UART interrupts and return the read character.  */
     regptr->imsc = uart_im;

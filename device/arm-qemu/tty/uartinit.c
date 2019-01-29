@@ -5,7 +5,7 @@
 #include <xinu.h>
 #include <uart.h>
 #include <interrupt.h>
-#include "pl011.h"
+
 struct uart_csreg uarttab[NUART];
 #ifdef _XINU_PLATFORM_ARM_RPI_
 
@@ -50,10 +50,8 @@ static void setup_gpio_pins(void *uart_regs)
 }
 #endif /* _XINU_PLATFORM_ARM_RPI_ */
 
-devcall uartHwInit(struct dentry *devptr)
+devcall uartinit(struct uart_csreg *regptr)
 {
-    volatile struct pl011_uart_csreg *regptr = devptr->dvcsr;
-
     /* TODO:  It doesn't work without this delay, but why? */
     udelay(1500);
 
@@ -123,9 +121,5 @@ devcall uartHwInit(struct dentry *devptr)
      * writing to its control register.  */
     regptr->cr = PL011_CR_RXE | PL011_CR_TXE | PL011_CR_UARTEN;
 
-    /* Register the UART's interrupt handler with XINU's interrupt vector, then
-     * actually enable the UART's interrupt line.  */
-    interruptVector[devptr->dvirq] = devptr->dvintr;
-    enable_irq(devptr->dvirq);
     return OK;
 }

@@ -25,19 +25,19 @@ void ttyhandler(uint32 xnum) {
 
 	/* Decode hardware interrupt request from UART device */
 
-        /* Check interrupt identification register */
-        iir = csrptr->iir;
+  /* Check interrupt identification register */
+  iir = csrptr->iir;
 
-        if (iir & UART_IIR_IRQ) {
+  if (iir & UART_IIR_IRQ) {
 		return;
-        }
+  }
 
 	/* Decode the interrupt cause based upon the value extracted	*/
 	/* from the UART interrupt identification register.  Clear	*/
 	/* the interrupt source and perform the appropriate handling	*/
 	/* to coordinate with the upper half of the driver		*/
 
-        /* Decode the interrupt cause */
+  /* Decode the interrupt cause */
 
 	iir &= UART_IIR_IDMASK;		/* Mask off the interrupt ID */
   switch (iir) {
