@@ -9,15 +9,15 @@
  *------------------------------------------------------------------------
  */
 shellcmd xsh_hello(int nargs, char *args[]) {
-    if (nargs <= 0){
-        printf("Too few args");
+    if (nargs < 0){
+        printf("No argument unpacked. Expected one.");
         return 1;
     }
     else if (nargs > 2){
-        printf("Too many args");
+        printf("Too many arguments to unpack.\n");
         return 1;
     }
-	printf("Hello %s ,  Welcome to the world of Xinu!! \n", args[1] );
+	printf("Hello %s,  Welcome to the world of Xinu!! \n", args[1] );
     return 0;
 	
 }
