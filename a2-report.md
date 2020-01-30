@@ -1,7 +1,7 @@
 ## Report Assignment 2 (devajain)
 
 ### Functions
-
+```
 #### include/prodcons.h
 /*Global variable for producer consumer*/
 extern int n; /*this is just declaration*/
@@ -10,7 +10,8 @@ extern sid32 prod, cons;
 /*function Prototype*/
 void consumer(int count);
 void producer(int count);
-
+```
+```
 #### shell/xsh_prodcons.c
 
 #include <xinu.h>
@@ -72,9 +73,11 @@ shellcmd xsh_prodcons(int nargs, char *args[])
   }
     
 }
+```
 
 #### apps/produce.c
 
+```
 #include <xinu.h>
 #include <prodcons.h>
 
@@ -91,9 +94,10 @@ void producer(int count) {
         signal(prod);
     }
 }
+```
 
 #### apps/consume.c
-
+```
 #include <xinu.h>
 #include <prodcons.h>
 
@@ -108,3 +112,4 @@ void consumer(int count) {
     signal(cons);
   }
 }
+```
