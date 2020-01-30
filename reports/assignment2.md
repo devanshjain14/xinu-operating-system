@@ -117,4 +117,8 @@ void consumer(int count) {
 
 #### Does your program output any garbage? If yes, why?
 
+The output of the program does not output any garbage value, because semaphores are used to control access to a common resource by multiple processes in a concurrent system. 
+
 #### Are all the produced values getting consumed? Check your program for a small count like 20.
+
+If I use 
