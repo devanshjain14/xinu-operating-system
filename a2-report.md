@@ -114,3 +114,7 @@ void consumer(int count) {
   }
 }
 ```
+
+#### Does your program output any garbage? If yes, why?
+
+#### Are all the produced values getting consumed? Check your program for a small count like 20.
