@@ -20,7 +20,6 @@ void	ttyhandle_out(
 	int32	avail;			/* available chars in output buf*/
 	int32	uspace;			/* space left in onboard UART	*/
 					/*   output FIFO		*/
-	int32 	fr = 0;
   int32   imsc = 0;
 
 	/* If output is currently held, simply ignore the call */
