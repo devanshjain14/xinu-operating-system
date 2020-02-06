@@ -1,3 +1,4 @@
+B
 # Welcome to Xinu
 
 # Build instructions
