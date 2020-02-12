@@ -97,13 +97,16 @@ bssloopa:
 	blo bssloopb	/* if still below, go backwards and loop */
 
 	/* Put the null thread's stack directly after the kernel image.  */
-	add sp, r1, #NULLSTK
+/*	add sp, r1, #NULLSTK */
+
+  /* No, don't. The unified code expects this here. */
+  ldr sp, =MAXADDR
 
 	/* The remaining memory available to the ARM will be Xinu's "memheap"
 	 * region, which is used for dynamic memory allocation.  Set its
 	 * starting address.  */
-	ldr r0, =MAXADDR
-	str sp, [r0]
+	/* ldr r0, =MAXADDR
+	str sp, [r0] */
 
 	/* Branch to the platform-independent C startup code, which takes no
 	 * parameters and never returns.  */
