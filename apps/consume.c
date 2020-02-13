@@ -25,9 +25,8 @@ void consumer_bb(int count) {
     int c = (readme++) % 5 ;
     int consumed= arr_q[c] ;
     char *proc_name = proctab[getpid()].prname;
-    printf("name : %s : %d \n" , proc_name , consumed);
+    printf("%s : %d \n" , proc_name , consumed);
     signal(cons);
   }
 }
-
 

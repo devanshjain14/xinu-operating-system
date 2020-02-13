@@ -31,12 +31,12 @@ void prodcons_bb(int nargs, char *args[]) {
   for (int j = 1 ; j< consumerProcesses ; j++)
   {
     char d[15] ;
-    sprintf(d,"consumer_ %d", i);
+    sprintf(d,"consumer_ %d", j);
     resume( create(consumer_bb, 1024, 20, d, 1, consumerCount));
 
   }
 }
-shellcmd xsh_prodcons(int nargs, char *args[]){
+shellcmd xsh_run(int nargs, char *args[]){
 
   if ((nargs == 1) || (strncmp(args[1], "list", 5) == 0)) {
       printf("my_function_1\n");

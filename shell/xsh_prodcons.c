@@ -32,13 +32,8 @@ shellcmd xsh_prodcons(int nargs, char *args[])
       if (integer)
       {
         count = integer;
-<<<<<<< HEAD
-        //prod = semcreate(0);
-        ///cons = semcreate(1);
-=======
         // prod = semcreate(0);
         // cons = semcreate(1);
->>>>>>> 81b4d9510483e450066b0760eb74040112038dc8
         //check args[1] if present assign value to count
         //create the process producer and consumer and put them in ready queue.
         //Look at the definations of function create and resume in the system folder for reference. 

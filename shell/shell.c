@@ -8,6 +8,9 @@
 /* Table of Xinu shell commands and the function associated with each	*/
 /************************************************************************/
 const	struct	cmdent	cmdtab[] = {
+	{"run", FALSE, xsh_run},
+	{"prodcons", FALSE, xsh_prodcons},
+	{"hello", FALSE, xsh_hello},
 	{"argecho",	TRUE,	xsh_argecho},
 	{"cat",		FALSE,	xsh_cat},
 	{"clear",	TRUE,	xsh_clear},
@@ -22,9 +25,6 @@ const	struct	cmdent	cmdtab[] = {
 	{"ps",		FALSE,	xsh_ps},
 	{"sleep",	FALSE,	xsh_sleep},
 	{"uptime",	FALSE,	xsh_uptime},
-	{"hello",	FALSE,	xsh_hello},
-	{"prodcons",	FALSE,	xsh_prodcons},
-	{"run",		FALSE,	xsh_run},
 #ifdef GPIO
 	{"led",         FALSE,  xsh_led},
 #endif
