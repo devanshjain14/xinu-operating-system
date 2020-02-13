@@ -29,4 +29,3 @@ void consumer_bb(int count) {
     signal(cons);
   }
 }
-
