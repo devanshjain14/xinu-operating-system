@@ -23,8 +23,13 @@ void	clkhandler()
 
 	csrptr->tisr = AM335X_TIMER1MS_TISR_OVF_IT_FLAG;
 
+<<<<<<< HEAD
 	/* Decrement 1000ms counter */
 
+=======
+	/* increment 1000ms counter */
+	
+>>>>>>> 024bb9a3013e127831df3501e4a19c0d8458b64a
 	clkticks++;
 
 	/* After 1 sec, increment clktime */
@@ -33,7 +38,7 @@ void	clkhandler()
 		clktime++;
 		clkticks = 0;
 	}
-
+	
 	/* check if sleep queue is empty */
 
 	if(!isempty(sleepq)) {
