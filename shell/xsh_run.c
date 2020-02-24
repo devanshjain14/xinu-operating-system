@@ -9,8 +9,8 @@ sid32 prod;
 sid32 cons;
 int arr_q[5];
 int readme, writ;
-int one = 1;
 int two = 2;
+int one = 1;
 
 void fut_test(int nargs, char *args[])
 {

@@ -12,6 +12,7 @@ future_t *future_alloc(future_mode_t mode, uint size, uint nelems)
     f->data = sizeof(future_t) + (char *)f;
     if (mode == FUTURE_SHARED)
     {
+
         f->set_queue = newqueue();
         f->get_queue = newqueue();
     }

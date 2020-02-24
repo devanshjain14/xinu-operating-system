@@ -27,7 +27,7 @@ typedef struct future_t
   qid16 get_queue;
 } future_t;
 
-/* Interface for the Futures system calls */
+/* Interface for the Futures system call */
 future_t *future_alloc(future_mode_t mode, uint size, uint nelems);
 syscall future_free(future_t *);
 syscall future_get(future_t *, char *);

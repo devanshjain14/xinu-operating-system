@@ -8,8 +8,8 @@ int ffib(int n)
   int minus1 = 0;
   int minus2 = 0;
   int this = 0;
-  int one = 1;
   int zero = 0;
+  int one = 1;
 
   if (n == 0)
   {
