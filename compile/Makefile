@@ -21,7 +21,7 @@ ARCH = echo ${PLATFORM} | awk -F '-' '{print $1}'
 ifeq ($(PLATFORM),arm-qemu)
 
 	ARCH          = arm
-	PLAT_CFLAGS   = -DARM_QEMU -mcpu=arm1176jz-s -ggdb3 -O
+	PLAT_CFLAGS   = -DARM_QEMU -DNQENT=500 -mcpu=arm1176jz-s -ggdb3 -O
 	PLAT_LOADADDR = 0x00010000
 	LDARCH        = armelf
 	INCLUDE	      = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
