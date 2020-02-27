@@ -6,6 +6,7 @@ extern	qid16	sleepq;		/* queue for sleeping processes		*/
 extern	int32	slnonempty;	/* nonzero if sleepq is nonempty	*/
 extern	int32	*sltop;		/* ptr to key in first item on sleepq	*/
 extern	uint32	preempt;	/* preemption counter			*/
+extern volatile ulong clkticks;
 
 #if defined(X86_GALILEO) || defined(X86_QEMU)
 /* Intel 8254-2 clock chip constants */
@@ -22,7 +23,7 @@ extern	uint32	preempt;	/* preemption counter			*/
 #ifdef ARM_QEMU
 #define CLKTICKS_PER_SEC  1000
 
-extern volatile ulong clkticks;
+
 
 void clkinit(void);
 void clkupdate(ulong cycles);

@@ -244,6 +244,10 @@ static	void	sysinit()
 
 	readylist = newqueue();
 
+	if (ptinit(PTMAXMSG) == SYSERR) {
+		kprintf("ptinit failed\n");
+	}
+
 	/* Initialize the real time clock */
 
 	clkinit();
