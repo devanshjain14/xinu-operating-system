@@ -1,15 +1,16 @@
 #include <xinu.h>
-
+#include <tscdf.h>
+#include <tscdf_input.h>
 uint pcport;
 
 int32 stream_proc(int nargs, char *args[])
 {
     ulong secs, msecs, time;
-    int32 num_streams, work_queue_depth, time_window, output_time;
+    int32 num_streams, work_queue_depth, time_window, output_time, stream_input;
     secs = clktime;
     char st, ts, v, a, ch, c;
     msecs = clkticks;
-
+    char a[100];
     char usage[] = "Usage: -s num_streams -w work_queue_depth -t time_window -o output_time\n";
 
     /* Parse arguments out of flags */
@@ -60,8 +61,17 @@ int32 stream_proc(int nargs, char *args[])
     }
 
     // Your code for Phase 1 goes here
+    for (int i = 0; i < stream_input.length(); i++)
+    {
+        a = (char *)stream_input[i];
+        st = atoi(a);
+        while (*a++ != '\t')
+            ts = atoi(a);
+        while (*a++ != '\t')
+            v = atoi(a);
+    }
 
-    for (i = 0; i < num_streams; i++)
+    for (int i = 0; i < num_streams; i++)
     {
         uint32 pm;
         pm = ptrecv(pcport);
