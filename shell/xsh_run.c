@@ -3,6 +3,7 @@
 #include <prodcons.h>
 #include <future.h>
 #include <future_test.h>
+#include <tscdf.h>
 
 // definition of array, semaphores and indices
 sid32 prod;
@@ -130,6 +131,12 @@ shellcmd xsh_run(int nargs, char *args[])
   {
     /* create a process with the function as an entry point. */
     resume(create((void *)fut_test, 4096, 20, "fut_test", 2, nargs, args));
+  }
+
+  else if (strncmp(args[0], "tscdf", 13) == 0)
+  {
+    /* create a process with the function as an entry point. */
+    resume(create((void *)stream_proc, 4096, 20, "stream_proc", 2, nargs, args));
   }
   return (0);
 }
