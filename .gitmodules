@@ -1,0 +1,3 @@
+[submodule "apps/tscdf"]
+	path = apps/tscdf
+	url = https://github.iu.edu/swany/tscdf

@@ -3,7 +3,7 @@
 #include <prodcons.h>
 #include <future.h>
 #include <future_test.h>
-#include <tscdf.h>
+#include <stream.h>
 
 // definition of array, semaphores and indices
 sid32 prod;
