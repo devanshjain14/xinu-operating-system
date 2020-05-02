@@ -4,7 +4,7 @@
 #include <future.h>
 #include <future_test.h>
 #include <stream.h>
-
+#include <fs.h>
 // definition of array, semaphores and indices
 sid32 prod;
 sid32 cons;
@@ -135,6 +135,7 @@ void fut_test(int nargs, char *args[])
     }
   }
 }
+uint fstest(int nargs, char *args[]);
 
 void prodcons_bb(int nargs, char *args[])
 {
@@ -211,6 +212,10 @@ shellcmd xsh_run(int nargs, char *args[])
   else if (strncmp(args[0], "tscdf_fq", 13) == 0)
   {
     resume(create(stream_proc_futures, 4096, 20, "stream_proc_futures", 2, nargs, args));
+  }
+  else if (strncmp(args[0], "fstest", 6) == 0)
+  {
+    resume(create((void *)fstest, 4096, 20, "fstest", 2, nargs, args));
   }
   return (0);
 }

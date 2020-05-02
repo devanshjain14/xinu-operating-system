@@ -1,4 +1,4 @@
-#####################################################################
+####################################################################
 #                                                                   #
 #                                                                   #
 #  Makefile for the Xinu operating system                           #
@@ -21,7 +21,7 @@ ARCH = echo ${PLATFORM} | awk -F '-' '{print $1}'
 ifeq ($(PLATFORM),arm-qemu)
 
 	ARCH          = arm
-	PLAT_CFLAGS   = -DARM_QEMU -DNQENT=500 -mcpu=arm1176jz-s -ggdb3 -O
+	PLAT_CFLAGS   = -DARM_QEMU -DFS=1 -mcpu=arm1176jz-s -ggdb3 -O
 	PLAT_LOADADDR = 0x00010000
 	LDARCH        = armelf
 	INCLUDE	      = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
@@ -42,7 +42,7 @@ else ifeq ($(PLATFORM),x86-qemu)
 	BRELOC      = 0x150000
 	BOOTPLOC    = 0x150000
 	PLAT_CFLAGS = -DX86_QEMU -DBRELOC=${BRELOC} -DBOOTPLOC=${BOOTPLOC} -march=i586 -m32 -O0
-	LDARCH      = elf_i386 
+	LDARCH      = elf_i386
 	INCLUDE	    = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
 	LGCC        =
 
@@ -50,9 +50,9 @@ else ifeq ($(PLATFORM),x86-galileo)
 
 	ARCH        = x86
 	PLAT_CFLAGS = -DX86_GALILEO -march=i586 -m32 -O
-	LDARCH      = elf_i386 
+	LDARCH      = elf_i386
 	INCLUDE	    = -I$(TOPDIR)/include -I$(TOPDIR)/include/platform/$(ARCH) -I$(TOPDIR)/include/platform/$(PLATFORM)
-	LGCC = 
+	LGCC =
 endif
 
 TOPDIR		=	..
@@ -97,7 +97,7 @@ REBUILDFLAGS    +=	-s $(TOPDIR)/device/$(PLATFORM)/tty		\
 			-s $(TOPDIR)/device/$(ARCH)/lfs			\
 			-s $(TOPDIR)/device/$(ARCH)/rfs			\
 			-s $(TOPDIR)/net  'arp_dump*'		\
-				'dhcp_dump*'  pxe.c		
+				'dhcp_dump*'  pxe.c
 
 else ifeq ($(ARCH),x86)
 REBUILDFLAGS    +=	-s $(TOPDIR)/device/$(PLATFORM)/tty	\
@@ -108,7 +108,7 @@ REBUILDFLAGS    +=	-s $(TOPDIR)/device/$(PLATFORM)/tty	\
 			-s $(TOPDIR)/device/$(PLATFORM)/rds	\
 			-s $(TOPDIR)/device/$(PLATFORM)/rfs	\
 			-s $(TOPDIR)/net  'arp_dump*'		\
-				'dhcp_dump*'  pxe.c		
+				'dhcp_dump*'  pxe.c
 endif
 
 DEFS		= 	-DBSDURG -DVERSION=\""`cat $(VERSIONFILE)`"\"
