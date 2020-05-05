@@ -28,7 +28,7 @@ void producer_bb(int count)
         wait(cons);
         arr_q[(writ++) % 5] = i;
         char *proc_name = proctab[getpid()].prname;
-        printf("%s : %d \n", proc_name, i);
+        printf("%s : %d		\n", proc_name, i);
         signal(prod);
     }
 }

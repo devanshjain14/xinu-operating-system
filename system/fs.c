@@ -381,8 +381,8 @@ int fs_read(int fd, void *buf, int nbytes)
                 if (inode_block == INODEBLOCKS - 1)
                 {
                     printf("Size exceeded\n");
-                    bytes = nnbytes - nbytes;
                     return bytes;
+                    bytes = nnbytes - nbytes;
                 }
 
                 bs_bread(0, in_blk, offset, buf, new_blocks);

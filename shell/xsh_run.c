@@ -152,14 +152,14 @@ void prodcons_bb(int nargs, char *args[])
   for (int i = 1; i <= producerProcesses; i++)
   {
     char c[15];
-    sprintf(c, "producer_ %d", i);
+    sprintf(c, "producer_%d", i);
     producerCount = atoi(args[3]);
     resume(create(producer_bb, 1024, 20, c, 1, producerCount));
   }
   for (int j = 1; j < consumerProcesses; j++)
   {
     char d[15];
-    sprintf(d, "consumer_ %d", j);
+    sprintf(d, "consumer_%d", j);
     resume(create(consumer_bb, 1024, 20, d, 1, consumerCount));
   }
 }
