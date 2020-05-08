@@ -1,4 +1,4 @@
-#### This was implemented under the valuable guidance of Prof David Crandall at Indiana University in B551 Elements of AI during Fall 2019.
+#### This was implemented under the valuable guidance of Prof Martin Swany at Indiana University in E519 Advanced Operating System during Spring 2020.
 
 ## Build instructions
 
